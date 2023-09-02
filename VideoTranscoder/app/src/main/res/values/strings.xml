@@ -1,0 +1,91 @@
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name" translatable="false">Video Transcoder</string>
+
+    <string name="selectVideo">Select\nVideo</string>
+    <string name="encode">Encode</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="ok">OK</string>
+    <string name="sendLabel">Send&#8230;</string>
+    <string name="share_dialog_title">Share with</string>
+    <string name="share">Share</string>
+
+    <string name="basicSettingsTitle">Basic Settings</string>
+    <string name="container">Container</string>
+    <string name="videoSettingsTitle">Video Settings</string>
+    <string name="codec">Codec</string>
+    <string name="fps">FPS</string>
+    <string name="resolution">Resolution</string>
+    <string name="bitrate">Bitrate (kb/s)</string>
+    <string name="audioSettingsTitle">Audio Settings</string>
+    <string name="sampleRate">Sample Rate (Hz)</string>
+    <string name="channels">Channels</string>
+    <string name="custom">Custom</string>
+
+    <string name="notSupportedTitle">Not Supported</string>
+    <string name="notSupportedMessage">This device\'s CPU architecture is not supported. Only ARM is supported.</string>
+
+    <string name="selectFileFirst">You must select a file to encode first.</string>
+    <string name="videoResolutionValueInvalid">Resolution value is invalid, could not encode.</string>
+    <string name="videoBitrateValueInvalid">Video bitrate value is invalid, could not encode.</string>
+    <string name="encodingNotification">Encoding <xliff:g id="input_filename">%s</xliff:g></string>
+    <string name="encodeStartConfirmation">Do you want to encode <xliff:g id="input_filename">%s</xliff:g> and output to <xliff:g id="output_filename">%s</xliff:g>?</string>
+    <string name="transcodeSuccess">Encoding completed successfully. The file was written to:\n<xliff:g id="path">%s</xliff:g></string>
+    <string name="transcodeFailed">Encoding failed: <xliff:g id="failure_message">%s</xliff:g></string>
+    <string name="cannotEncodeFile">Cannot encode file: <xliff:g id="failure_description">%s</xliff:g></string>
+    <string name="couldNotFindFileSubmsg">could not find input file</string>
+    <string name="fieldMissingError"><xliff:g id="field_name">%s</xliff:g> missing</string>
+    <string name="fieldMissingOrInvalidError"><xliff:g id="field_name">%s</xliff:g> missing or invalid</string>
+    <string name="invalidMediaFile">The selected media file is invalid or not supported</string>
+    <string name="mediaPlaybackFailed">The selected media file could not be previewed</string>
+
+    <string name="writePermissionExplanation">This application needs access to storage in order to read and write media files. Without this access, the application cannot transcode.</string>
+    <string name="permissionRequestAgain">Request again</string>
+
+    <string name="fileLocationLookupFailed">Failed to resolve the location of the media file</string>
+    <string name="encodeCanceled">Encoding was canceled</string>
+
+    <string name="codecSlowExcellent">Slow, Quality excellent</string>
+    <string name="codecFastGood">Fast, Quality good</string>
+    <string name="codecFastOk">Fast, Quality OK</string>
+    <string name="codecFastLow">Fast, Quality low</string>
+
+    <string name="about">About</string>
+    <string name="app_copyright_fmt">Copyright 2018-<xliff:g>%d</xliff:g> Branden Archer</string>
+    <string name="app_license">Licensed under the GPLv3.</string>
+    <string name="about_title_fmt">About <xliff:g id="app_name">%s</xliff:g></string>
+    <string name="debug_version_fmt">Version: <xliff:g id="version">%s</xliff:g></string>
+    <string name="app_revision_fmt">Revision Information: <xliff:g id="app_revision_url">%s</xliff:g></string>
+    <string name="app_libraries"><xliff:g id="app_name">%s</xliff:g> uses the following third-party libraries: <xliff:g id="app_libraries_list">%s</xliff:g></string>
+    <string name="app_resources"><xliff:g id="app_name">%s</xliff:g> uses the following third-party resources: <xliff:g id="app_resources_list">%s</xliff:g></string>
+
+    <!-- error strings -->
+    <string name="app_ui_crash">App/UI crashed</string>
+    <string name="send_email_title">Send Email</string>
+
+    <!-- error activity -->
+    <string name="sorry_string">Sorry, that should not have happened.</string>
+    <string name="error_report_button_text">Report error via e-mail</string>
+    <string name="error_snackbar_message">Sorry, some errors occurred.</string>
+    <string name="error_snackbar_action">REPORT</string>
+    <string name="what_device_headline">Info:</string>
+    <string name="what_happened_headline">What happened:</string>
+    <string name="info_labels">What:\\nRequest:\\nContent Lang:\\nService:\\nGMT Time:\\nPackage:\\nVersion:\\nOS version:</string>
+    <string name="your_comment">Your comment (in English):</string>
+    <string name="error_details_headline">Details:</string>
+    <string name="error_report_title">Error report</string>
+
+    <string name="notificationChannelName">VideoTranscoder Encoding Service</string>
+
+    <string name="receivingSharedData">Receiving shared data…</string>
+    <string name="failedToReceiveSharedData">Failed to receive shared data</string>
+
+    <string name="settings">Settings</string>
+    <string name="fileSearchPathSetting">File search path</string>
+    <string name="fileSearchPathSettingSummary">The path on the file system where the file browser will open when searching for a media file</string>
+    <string name="fileSearchPathSettingLastUsed">Last used path</string>
+    <string name="fileSearchPathSettingExternal">External storage</string>
+
+</resources>

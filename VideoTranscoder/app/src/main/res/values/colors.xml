@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EF4438</color>
+    <color name="colorPrimaryDark">#D32E2E</color>
+    <color name="colorAccent">#ffc107</color>
+    <color name="colorPrimaryText">#ffffff</color>
+    <color name="colorSecondaryText">#000000</color>
+
+    <color name="inputContrastBackground">#F8F8F8</color>
+    <color name="inputBackground">#FFFFFF</color>
+    <color name="inputBorder">#DDDDDD</color>
+    <color name="inputDividerBorder">#AAAAAA</color>
+</resources>
