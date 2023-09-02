@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 直角按钮样式 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按压状态 -->
+    <item android:drawable="@drawable/float_status_close_pressed" android:state_pressed="true" />
+
+    <!-- 默认状态 -->
+    <item android:drawable="@drawable/float_status_close_normal" />
+
+</selector>

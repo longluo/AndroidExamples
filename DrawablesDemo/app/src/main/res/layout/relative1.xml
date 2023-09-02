@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <Button
+        android:id="@+id/buttonBottomRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+
+        android:layout_alignParentBottom="true"
+        android:text="On The Right" />
+
+    <Button
+        android:id="@+id/bottomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/buttonBottomRight"
+        android:text="Heyo" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomButton"
+        android:layout_alignParentTop="true"
+        android:background="#aaffaa">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="
+Computerworld - Google is looking to freshen up its search results with updated algorithms.
+
+The updates could be an important part of Google's strategy to keep ahead of search rivals like Yahoo and Microsoft's Bing engine, analysts said.
+
+The tweak in the basic Google algorithm should make search results much more timely for users, Google said, adding that about 35% of all searches should be affected.
+                                                                                          f
+If I search for 'Olympics,' I probably want information about next summer's upcoming Olympics, not the 1900 Summer Olympics (the only time my favorite sport, cricket, was played), wrote Google Fellow Amit Singhal in a blog post this afternoon.
+
+Google watch
+Google updates search algorithm, ups ante vs. Bing
+Update: Google 'messed up,' yanks Gmail app for iPhone, iPad
+Google gives Gmail an updated look
+Google may add to Android with online music store
+Google antitrust probe to shed light on search, experts say
+Google will use Zagat's (so you don't have to)
+Google offered to split mobile revenue with Sun, papers show
+Google investors sue Page, Schmidt over $500M settlement with DOJ
+As a carrier's partner, Google may shine
+Google's Motorola buy may offer boost to Microsoft
+Full coverage: Google
+Google Search uses a freshness algorithm, designed to give you the most up-to-date results, so even when I just type 'Olympics' without specifying 2012, I still find what I'm looking for, he added.
+
+Singhal, though, noted that not all searches are based on finding the most recent results.
+
+For instance, someone trying to look up their favorite marinara recipe has different needs than someone trying to find information on the latest happenings with the Occupy Wall Street movement.
+
+Therefore, the significant improvement to Google's search algorithm can determine when to give users the more timely results, Singhal said.
+
+Different searches have different freshness needs, wrote Singhal. This algorithmic improvement is designed to better understand how to differentiate between these kinds of searches and the level of freshness you need, and make sure you get the most up-to-the minute answers.
+
+Such updates are necessary if Google expects to maintain its dramatic lead in the search market, according to Dan Olds, an analyst at Gabriel Consulting Group.
+
+Google needs to continue to refine search in order to maintain its top-dog status, Olds said. Bing isn't a huge threat at this point, but the Bingers are hungry and aren't going to go away. They're busy working on their own enhancements. It's trench warfare and Google has to keep pushing ahead. Search is Google's bread and butter, the foundation of its entire empire.
+                " />
+
+    </ScrollView>
+
+</RelativeLayout>

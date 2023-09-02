@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/basicShapes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Basic Shapes" />
+
+    <Button
+        android:id="@+id/corners"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Corners" />
+
+    <Button
+        android:id="@+id/gradient"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Gradient" />
+
+    <Button
+        android:id="@+id/stateLists"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="State Lists" />
+
+    <Button
+        android:id="@+id/ninePatch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Nine Patch" />
+
+    <Button
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Relative Layout" />
+
+</LinearLayout>
+
