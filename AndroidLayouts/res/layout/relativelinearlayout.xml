@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/yellow"
+        android:text="第一组第一项" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/TextView01"
+        android:background="@drawable/red"
+        android:text="第一组第二项" >
+    </TextView>
+
+</RelativeLayout>

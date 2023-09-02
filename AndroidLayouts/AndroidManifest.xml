@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.layouts"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".Layouts"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Layout_Framelayout"
+            android:label="Framelayout输出" >
+        </activity>
+        <activity android:name=".Layout_Linearlayout" >
+        </activity>
+        <activity android:name=".Layout_Relativelayout" >
+        </activity>
+        <activity android:name=".Layout_RelativeLinearlayout" >
+        </activity>
+        <activity android:name=".Layout_Tablelayout" >
+        </activity>
+        
+        <activity android:name=".tablayout.TabLayoutActivity" >
+        </activity>
+        <activity
+            android:name=".tablayout.MmsActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".tablayout.DialActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".tablayout.ContactsActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+    <uses-sdk android:minSdkVersion="8" />
+
+</manifest>

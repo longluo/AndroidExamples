@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:text="点击我查看Log绘制流程" >
+    </Button>
+
+    <com.android.customviewgroup.MyViewGroup
+        android:id="@+id/custemViewGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.android.customviewgroup.MyViewGroup>
+
+</LinearLayout>

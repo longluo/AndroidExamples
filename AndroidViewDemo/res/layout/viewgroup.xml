@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.viewdemo.MyViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myViewGroup"
+    android:layout_width="480px"
+    android:layout_height="480px"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/outtext"
+        android:layout_width="240px"
+        android:layout_height="320px"
+        android:text="hello" />
+
+    <LinearLayout
+        android:id="@+id/testViewGroup"
+        android:layout_width="360px"
+        android:layout_height="120px" >
+
+        <Button
+            android:id="@+id/test"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello" />
+    </LinearLayout>
+
+</com.android.viewdemo.MyViewGroup>

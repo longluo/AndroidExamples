@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="msg">City :</string>
+    <string name="app_name">Weather Forecast</string>
+    <string name="inputstr">Please Input the City:</string>
+    <string name="OK">Confirm</string>
+
+    <color name="blue">#2A99FB</color>
+    <color name="black">#000</color>
+
+</resources>

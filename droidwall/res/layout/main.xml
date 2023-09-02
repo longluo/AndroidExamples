@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:duplicateParentState="false"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#FFFFFFFF" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10px" >
+
+        <TextView
+            android:id="@+id/label_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Mode: "
+            android:textSize="20px" >
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#FFFFFFFF" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="0px" >
+
+        <View
+            android:layout_width="34dip"
+            android:layout_height="fill_parent" />
+
+        <ImageView
+            android:id="@+id/img_wifi"
+            android:layout_width="34dip"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:src="@drawable/eth_wifi" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/img_3g"
+            android:layout_width="34dip"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:src="@drawable/eth_3g" >
+        </ImageView>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My FileManager</string>
+    <string name="up_one_level">..(返回上一级目录)</string>
+    <string name="current_dir">.(刷新)</string>
+
+</resources>

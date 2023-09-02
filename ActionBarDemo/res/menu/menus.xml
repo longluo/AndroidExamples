@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item 
+        android:id="@+id/search"
+        android:actionViewClass="android.widget.SearchView"
+        android:showAsAction="ifRoom"
+        android:title="Search"/>
+    
+    <item 
+        android:id="@+id/item2"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom|withText"
+        android:title="edit"
+        />
+    
+    <item 
+        android:id="@+id/item3"
+        android:orderInCategory="3"
+        android:showAsAction="ifRoom|withText"
+        android:title="about"
+       />
+    
+    <item 
+        android:id="@+id/item4"
+        android:orderInCategory="4"
+        android:showAsAction="ifRoom|withText"
+        android:title="help"
+        />
+ 
+    <item 
+        android:id="@+id/item5"
+        android:orderInCategory="5"
+        android:showAsAction="ifRoom|withText"
+        android:title="file"/>
+    
+    <item 
+        android:id="@+id/item6"
+        android:orderInCategory="6"
+        android:showAsAction="ifRoom|withText"
+        android:title="run"/>
+    
+    <item 
+        android:id="@+id/item7"
+        android:orderInCategory="7"
+        android:showAsAction="ifRoom|withText"
+        android:title="source"/>
+    
+    <item 
+        android:id="@+id/item8"
+        android:orderInCategory="8"
+        android:showAsAction="ifRoom|withText"
+        android:title="navigate"/>
+    
+    <item 
+        android:id="@+id/item9"
+        android:orderInCategory="9"
+        android:showAsAction="ifRoom|withText"
+        android:title="save"/>
+    
+    <item 
+        android:id="@+id/item10"
+        android:orderInCategory="10"
+        android:showAsAction="ifRoom|withText"
+        android:title="project"/>
+    
+    <item 
+        android:id="@+id/item11"
+        android:orderInCategory="11"
+        android:showAsAction="ifRoom|withText"
+        android:title="refactor"/>
+    
+    <item 
+        android:id="@+id/item12"
+        android:orderInCategory="12"
+        android:showAsAction="ifRoom|withText"
+        android:title="window"/>
+
+</menu>

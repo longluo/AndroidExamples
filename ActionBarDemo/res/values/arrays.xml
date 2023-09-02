@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="action_list">
+        <item>三国演义</item>
+        <item>红楼梦</item>
+        <item>水浒传</item>
+        <item>西游记</item>
+    </string-array>
+</resources>

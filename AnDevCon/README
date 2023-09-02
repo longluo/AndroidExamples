@@ -1,0 +1,10 @@
+Code for AnDevCon (andevcon.com) - class 802 - Building LBS Apps. 
+
+This is a sample application to display a user's route on Google Maps in Android.
+
+IMPORTANT NOTE: Replace the "MapApiKey" with the actual Google Maps API key that you obtain by going to http://code.google.com/android/add-ons/google-apis/mapkey.html
+
+Also, from your emulator/DDMS, load the route.gpx file from the 'Emulator Control' tab.
+
+The presentations are at http://andevcon.com/speakerpresentations.html
+

@@ -1,0 +1,10 @@
+---- notification_recording Matches (6 in 4 files) ----
+R.java (gen\net\micode\soundrecorder):        public static final int notification_recording=0x7f06001c;
+RecorderService.java (src\net\micode\soundrecorder):                getString(R.string.notification_recording), System.currentTimeMillis());
+RecorderService.java (src\net\micode\soundrecorder):                getString(R.string.notification_recording), pendingIntent);
+RecorderService.java (src\net\micode\soundrecorder):                    getString(R.string.notification_recording), System.currentTimeMillis());
+Strings.xml (res\values):    <string name="notification_recording">Recording...</string>
+Strings.xml (res\values-zh-rcn):    <string name="notification_recording">正在录音...</string>
+---- vibration_center_button Matches (2 in 2 files) ----
+Arrays.xml (res\values):    <integer-array name="vibration_center_button">
+R.java (gen\net\micode\soundrecorder):        public static final int vibration_center_button=0x7f050001;

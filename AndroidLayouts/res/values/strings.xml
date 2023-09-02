@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Android Layouts!</string>
+    <string name="app_name">Layouts</string>
+
+    <drawable name="red">#7f00</drawable>
+    <drawable name="blue">#0000ff</drawable>
+    <drawable name="green">#00ff00</drawable>
+    <drawable name="yellow">#ffff00</drawable>
+
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff00"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="150dip"
+            android:layout_height="30dip"
+            android:background="#ff00ff"
+            android:text="hello world1!" />
+
+        <TextView
+            android:layout_width="150dip"
+            android:layout_height="30dip"
+            android:background="#332277"
+            android:text="hello world2!" />
+
+        <TextView
+            android:layout_width="150dip"
+            android:layout_height="30dip"
+            android:background="#543266"
+            android:text="hello world3!" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff00"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="150dip"
+            android:layout_height="30dip"
+            android:background="#1f4422"
+            android:text="hello world1!" />
+
+        <TextView
+            android:layout_width="150dip"
+            android:layout_height="30dip"
+            android:background="#332277"
+            android:text="hello world2!" />
+
+        <TextView
+            android:layout_width="150dip"
+            android:layout_height="30dip"
+            android:background="#543266"
+            android:text="hello world3!" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00ff00"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:background="#1f4422"
+            android:text="hello world1!" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#332277"
+            android:text="hello world2!" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#543266"
+            android:text="hello world3!" />
+    </LinearLayout>
+
+</LinearLayout>

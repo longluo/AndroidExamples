@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_striped_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:padding="5dip" >
+
+        <Button
+            android:id="@+id/ringagain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/clock_list"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:padding="10dip"
+            android:text="True"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <com.util.SlipButton
+            android:id="@+id/splitbutton"
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_alignRight="@id/ringagain"
+            android:layout_alignTop="@id/ringagain"
+            android:layout_marginTop="10dip" />
+
+
+</RelativeLayout>
+</LinearLayout>

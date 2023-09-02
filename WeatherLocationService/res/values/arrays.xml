@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Used in View/Spinner1.java -->
+    <string-array name="Municipalities">
+        <item>北京市</item>
+        <item>上海市</item>
+        <item>重庆市</item>
+        <item>天津市</item>
+    </string-array>
+    <string-array name="ProvincialCounties">
+        <item>济源市</item>
+    </string-array>
+
+    <!-- 特殊城市 -->
+    <string-array name="special_locate_address">
+        <item>铜山</item>
+        <item>义马</item>
+        <item>陕县</item>
+        <item>惠安县</item>
+        <item>石狮</item>
+    </string-array>
+    <!-- 特殊城市对应上一级行政区域划分 -->
+    <string-array name="upper_city_special_locate_address">
+        <item>徐州市</item>
+        <item>三门峡市</item>
+        <item>三门峡市</item>
+        <item>泉州市</item>
+        <item>泉州市</item>
+    </string-array>
+
+</resources>

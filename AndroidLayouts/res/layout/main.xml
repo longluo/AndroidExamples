@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Android 布局演示"
+        android:typeface="normal" >
+    </TextView>
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FrameLayout演示" >
+    </Button>
+
+    <Button
+        android:id="@+id/Button02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LinearLayout演示" >
+    </Button>
+
+    <Button
+        android:id="@+id/Button03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RelativeLayout演示" >
+    </Button>
+
+    <Button
+        android:id="@+id/Button04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LinearLayout 和 RelativeLayout演示" >
+    </Button>
+
+    <Button
+        android:id="@+id/Button05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:text="TableLayout演示" >
+    </Button>
+    
+    <Button
+        android:id="@+id/ButtonTab"
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:text="Tab Layout Show"
+        android:textSize="26px"
+        android:textColor="#ff576d83">
+    </Button>
+    
+</LinearLayout>

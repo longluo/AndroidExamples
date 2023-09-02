@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/table"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1" >
+
+    <TableRow>
+
+        <TextView
+            android:gravity="right"
+            android:padding="3dip"
+            android:text="用户名:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/username"
+            android:padding="3dip"
+            android:scrollHorizontally="true" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:gravity="right"
+            android:padding="3dip"
+            android:text="登录密码:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/password"
+            android:padding="3dip"
+            android:password="true"
+            android:scrollHorizontally="true" />
+    </TableRow>
+
+    <TableRow android:gravity="right" >
+
+        <Button
+            android:id="@+id/cancel"
+            android:text="取消" />
+
+        <Button
+            android:id="@+id/login"
+            android:text="登录" />
+    </TableRow>
+
+</TableLayout>

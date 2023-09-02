@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ActionBarDemo</string>
+    <string name="tab1">father</string>
+    <string name="tab2">mather</string>
+    <string name="tab3">sister</string>
+    <string name="start">Start</string>
+
+</resources>

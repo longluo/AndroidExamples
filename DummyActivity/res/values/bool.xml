@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="is_phone">true</bool>
+    <bool name="blackmagic">true</bool>
+    <bool name="listview_hardware_accelerated">true</bool>
+    <bool name="jb_notification">true</bool>
+
+</resources>

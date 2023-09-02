@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WeatherLocationService</string>
+    <string name="sheng">直辖县级行政单位</string>
+    <string name="qu">区</string>
+</resources>
