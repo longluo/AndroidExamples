@@ -4,19 +4,19 @@ plugins {
 
 android {
     namespace 'com.longluo.ndk'
-    compileSdk 33
+    compileSdk 32
 
     defaultConfig {
         applicationId "com.longluo.ndk"
-        minSdk 26
-        targetSdk 33
+        minSdk 25
+        targetSdk 32
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags '-std=c++11'
+                cppFlags '-std=c++14'
             }
         }
     }
