@@ -1,0 +1,37 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style  name= "Dialog_Fullscreen" >
+        <item  name= "android:windowFullscreen" >true </item>
+        <item  name= "android:windowNoTitle" >true </item>
+    </style>
+
+    <!-- TextInputLayout -->
+    <style name="CommonTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="hintEnabled">true</item>
+        <item name="android:textColorHint">#99000000</item>
+        <item name="hintTextAppearance">@style/TextInputLayoutStyle</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DatePickerDialogStyle" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize">
+        <item name="colorPrimary">#134092</item>
+        <item name="colorPrimaryDark">#134092</item>
+        <item name="colorAccent">#134092</item>
+        <item name="android:textColor">#134092</item>
+    </style>
+
+</resources>

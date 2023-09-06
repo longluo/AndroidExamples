@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/niang"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.dragchoose.DragChooseActivity">
+
+    <com.longluo.demo.view.dragchoose.widget.DragChessView
+        android:id="@+id/drag_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

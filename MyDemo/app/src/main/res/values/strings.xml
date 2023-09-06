@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JavaAndroidTry</string>
+
+    <string name="has_used">チケットの適用に失敗しました。（無効な決済です）</string>
+</resources>

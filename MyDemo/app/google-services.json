@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "173433274555",
+    "project_id": "MyDemo",
+    "storage_bucket": "com.longluo.demo"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173433274555:android:45a597fcfec2bed324a99e",
+        "android_client_info": {
+          "package_name": "com.longluo.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173433274555-f4ge4atjudh33nhvh5vcg0bugpmspo04.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.longluo.demo",
+            "certificate_hash": "4cfd880170b30cf347d4e40b5616347b2245cd5d"
+          }
+        },
+        {
+          "client_id": "173433274555-9tp0ss17o7r8jqh5bc6thr7p4m3thhiv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClcWZ95MFksvOWK7t40JfetlAidtSm2_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173433274555-9tp0ss17o7r8jqh5bc6thr7p4m3thhiv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

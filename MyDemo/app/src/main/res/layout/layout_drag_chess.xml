@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <!-- 左边的可拖拽自定义列表view -->
+    <com.longluo.demo.view.dragchoose.widget.DragView
+        android:id="@+id/drag_left"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:background="#ffffff" />
+
+    <TextView
+        android:id="@+id/folder_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#0586F9"
+        android:gravity="center"
+        android:text="hello world"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_right"
+        android:layout_width="60dp"
+        android:layout_height="350dp"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

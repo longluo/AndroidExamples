@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~
+  ~ 这个写法是在dialog的四周加上drawable属性颜色的边距，透不到dialog下面的画面
+  ~
+  -->
+
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@color/transparent"
+    android:insetTop="20dp"
+    android:insetBottom="20dp"
+    android:insetLeft="30dp"
+    android:insetRight="30dp"/>

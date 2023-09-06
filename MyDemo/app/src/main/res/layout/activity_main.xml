@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="spinner" />
+
+    <Button
+        android:id="@+id/btn_spinner_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="spinner年月日" />
+
+    <Button
+        android:id="@+id/btn_dialog_fullscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dialog全屏" />
+
+    <Button
+        android:id="@+id/btn_okhttp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="okhttp3" />
+
+    <Button
+        android:id="@+id/btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试按钮" />
+
+    <Button
+        android:id="@+id/btn_date_picker_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date picker dialog" />
+
+    <Button
+        android:id="@+id/btn_open_firebase_in_app_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="代码的方式弹出dialog" />
+
+    <Button
+        android:id="@+id/btn_to_radiobutton_phone_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="代码的方式弹出dialog" />
+
+    <Button
+        android:id="@+id/btn_to_drag_list_item_to_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拖拽list item 到指定位置" />
+
+    <Button
+        android:id="@+id/btn_to_drag_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拖拽list item 选择到指定位置" />
+
+</LinearLayout>
