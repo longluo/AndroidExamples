@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Jared Rummler
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <declare-styleable name="MaterialSpinner" tools:ignore="ResourceName">
+    <attr format="color" name="ms_arrow_tint"/>
+    <attr format="boolean" name="ms_hide_arrow"/>
+    <attr format="color" name="ms_background_color"/>
+    <attr format="color" name="ms_text_color"/>
+    <attr format="dimension" name="ms_dropdown_max_height"/>
+    <attr format="dimension" name="ms_dropdown_height">
+      <enum name="fill_parent" value="-1"/>
+      <enum name="match_parent" value="-1"/>
+      <enum name="wrap_content" value="-2"/>
+    </attr>
+    <attr format="integer" name="ms_background_selector"/>
+    <attr format="dimension" name="ms_padding_top"/>
+    <attr format="dimension" name="ms_padding_left"/>
+    <attr format="dimension" name="ms_padding_bottom"/>
+    <attr format="dimension" name="ms_padding_right"/>
+    <attr format="dimension" name="ms_popup_padding_top"/>
+    <attr format="dimension" name="ms_popup_padding_left"/>
+    <attr format="dimension" name="ms_popup_padding_bottom"/>
+    <attr format="dimension" name="ms_popup_padding_right"/>
+    <attr format="string" name="ms_hint"/>
+    <attr format="color" name="ms_hint_color"/>
+  </declare-styleable>
+</resources>
