@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#75d262">
+
+    <SurfaceView
+        android:id="@+id/surface_stream"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--    <com.longluo.dragdemo.DragView
+            android:id="@+id/iv_drag"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/function_night_open" />
+            -->
+
+    <com.longluo.dragdemo.MoveView
+        android:id="@+id/move_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right" />
+
+    <com.longluo.dragdemo.StreamStatusView
+        android:id="@+id/status_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center" />
+
+    <com.longluo.dragdemo.RemovableView
+        android:id="@+id/removable_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+</FrameLayout>

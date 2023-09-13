@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#75d262">
 
-    <com.longluo.dragdemo.DragView
-        android:id="@+id/iv_drag"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="bottom"
-        android:src="@drawable/function_night_open" />
+    <Button
+        android:id="@+id/btn_test1"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:text="Drag Test 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <com.longluo.dragdemo.MoveView
-        android:id="@+id/move_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|right" />
+    <Button
+        android:id="@+id/btn_test2"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Drag Test 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_test1" />
 
-    <com.longluo.dragdemo.StreamStatusView
-        android:id="@+id/status_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center" />
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
