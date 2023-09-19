@@ -7,7 +7,8 @@
 package protect.videotranscoder.picker;
 
 import android.os.Environment;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.nononsenseapps.filepicker.AbstractFilePickerActivity;
 import com.nononsenseapps.filepicker.AbstractFilePickerFragment;
@@ -24,8 +25,7 @@ public class FastScrollerFilePickerActivity extends AbstractFilePickerActivity {
     }
 
     @Override
-    protected AbstractFilePickerFragment getFragment(@Nullable String startPath, int mode, boolean allowMultiple, boolean allowCreateDir, boolean allowExistingFile, boolean singleClick)
-    {
+    protected AbstractFilePickerFragment getFragment(@Nullable String startPath, int mode, boolean allowMultiple, boolean allowCreateDir, boolean allowExistingFile, boolean singleClick) {
         return getFragment(startPath, mode, allowMultiple, allowCreateDir);
     }
 

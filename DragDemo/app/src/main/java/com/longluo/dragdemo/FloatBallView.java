@@ -73,6 +73,15 @@ public class FloatBallView extends LinearLayout {
         mIvRingLatency = rootView.findViewById(R.id.iv_ring_status);
 
         mTvLatency = rootView.findViewById(R.id.tv_latency);
+
+//        mRootView.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (mListener != null) {
+//                    mListener.onClick(v);
+//                }
+//            }
+//        });
     }
 
     @Override

@@ -35,4 +35,24 @@
         app:ms_dropdown_height="wrap_content"
         app:ms_dropdown_max_height="350dp" />
 
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner_time"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:entries="@array/remote_lock_screen_time"
+        app:ms_background_color="#00FF00"
+        app:ms_background_selector="@color/colorPrimaryDark"
+        app:ms_dropdown_height="wrap_content"
+        app:ms_dropdown_max_height="146dp"
+        app:ms_text_color="#FF0000" />
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinner_pay_mode"
+        android:layout_width="160dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="60dp"
+        app:ms_dropdown_height="wrap_content"
+        app:ms_dropdown_max_height="146dp" />
+
 </RelativeLayout>

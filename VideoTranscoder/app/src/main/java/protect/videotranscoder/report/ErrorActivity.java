@@ -32,12 +32,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -46,6 +40,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import org.acra.ReportField;
 import org.acra.collector.CrashReportData;
@@ -65,8 +66,7 @@ import protect.videotranscoder.BuildConfig;
 import protect.videotranscoder.R;
 import protect.videotranscoder.activity.MainActivity;
 
-public class ErrorActivity extends AppCompatActivity
-{
+public class ErrorActivity extends AppCompatActivity {
     // LOG TAGS
     public static final String TAG = "VideoTranscoder";
     // BUNDLE TAGS
@@ -81,30 +81,24 @@ public class ErrorActivity extends AppCompatActivity
     // views
     private EditText userCommentBox;
 
-    public static void reportUiError(final AppCompatActivity activity, final Throwable el)
-    {
+    public static void reportUiError(final AppCompatActivity activity, final Throwable el) {
         reportError(activity, el, null,
                 ErrorInfo.make(UserAction.UI_ERROR, "none", "", R.string.app_ui_crash));
     }
 
     public static void reportError(final Context context, final List<Throwable> el,
-                                   View rootView, final ErrorInfo errorInfo)
-    {
-        if (rootView != null)
-        {
+                                   View rootView, final ErrorInfo errorInfo) {
+        if (rootView != null) {
             Snackbar.make(rootView, R.string.error_snackbar_message, 3 * 1000)
                     .setActionTextColor(Color.YELLOW)
                     .setAction(R.string.error_snackbar_action, v ->
                             startErrorActivity(context, errorInfo, el)).show();
-        }
-        else
-        {
+        } else {
             startErrorActivity(context, errorInfo, el);
         }
     }
 
-    private static void startErrorActivity(Context context, ErrorInfo errorInfo, List<Throwable> el)
-    {
+    private static void startErrorActivity(Context context, ErrorInfo errorInfo, List<Throwable> el) {
         Intent intent = new Intent(context, ErrorActivity.class);
         intent.putExtra(ERROR_INFO, errorInfo);
         intent.putExtra(ERROR_LIST, elToSl(el));
@@ -113,11 +107,9 @@ public class ErrorActivity extends AppCompatActivity
     }
 
     public static void reportError(final Context context, final Throwable e,
-                                   View rootView, final ErrorInfo errorInfo)
-    {
+                                   View rootView, final ErrorInfo errorInfo) {
         List<Throwable> el = null;
-        if (e != null)
-        {
+        if (e != null) {
             el = new Vector<>();
             el.add(e);
         }
@@ -126,8 +118,7 @@ public class ErrorActivity extends AppCompatActivity
 
     // async call
     public static void reportError(Handler handler, final Context context, final Throwable e,
-                                   final View rootView, final ErrorInfo errorInfo)
-    {
+                                   final View rootView, final ErrorInfo errorInfo) {
         List<Throwable> el = null;
         if (e != null) {
             el = new Vector<>();
@@ -138,19 +129,15 @@ public class ErrorActivity extends AppCompatActivity
 
     // async call
     public static void reportError(Handler handler, final Context context, final List<Throwable> el,
-                                   final View rootView, final ErrorInfo errorInfo)
-    {
+                                   final View rootView, final ErrorInfo errorInfo) {
         handler.post(() -> reportError(context, el, rootView, errorInfo));
     }
 
-    public static void reportError(final Context context, final CrashReportData report, final ErrorInfo errorInfo)
-    {
+    public static void reportError(final Context context, final CrashReportData report, final ErrorInfo errorInfo) {
         // get key first (don't ask about this solution)
         ReportField key = null;
-        for (ReportField k : report.keySet())
-        {
-            if (k.toString().equals("STACK_TRACE"))
-            {
+        for (ReportField k : report.keySet()) {
+            if (k.toString().equals("STACK_TRACE")) {
                 key = k;
             }
         }
@@ -163,8 +150,7 @@ public class ErrorActivity extends AppCompatActivity
         context.startActivity(intent);
     }
 
-    private static String getStackTrace(final Throwable throwable)
-    {
+    private static String getStackTrace(final Throwable throwable) {
         final StringWriter sw = new StringWriter();
         final PrintWriter pw = new PrintWriter(sw, true);
         throwable.printStackTrace(pw);
@@ -172,27 +158,23 @@ public class ErrorActivity extends AppCompatActivity
     }
 
     // errorList to StringList
-    private static String[] elToSl(List<Throwable> stackTraces)
-    {
+    private static String[] elToSl(List<Throwable> stackTraces) {
         String[] out = new String[stackTraces.size()];
-        for (int i = 0; i < stackTraces.size(); i++)
-        {
+        for (int i = 0; i < stackTraces.size(); i++) {
             out[i] = getStackTrace(stackTraces.get(i));
         }
         return out;
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_error);
 
         Intent intent = getIntent();
 
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null)
-        {
+        if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setTitle(R.string.error_report_title);
             actionBar.setDisplayShowTitleEnabled(true);
@@ -220,12 +202,9 @@ public class ErrorActivity extends AppCompatActivity
 
         // normal bugreport
         buildInfo(errorInfo);
-        if (errorInfo.message != 0)
-        {
+        if (errorInfo.message != 0) {
             errorMessageView.setText(errorInfo.message);
-        }
-        else
-        {
+        } else {
             errorMessageView.setVisibility(View.GONE);
             findViewById(R.id.messageWhatHappenedView).setVisibility(View.GONE);
         }
@@ -233,32 +212,27 @@ public class ErrorActivity extends AppCompatActivity
         errorView.setText(formErrorText(errorList));
 
         // print stack trace once again for debugging:
-        for (String e : errorList)
-        {
+        for (String e : errorList) {
             Log.e(TAG, e);
         }
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
+    public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.error_menu, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if(id == android.R.id.home)
-        {
+        if (id == android.R.id.home) {
             goToReturnActivity();
         }
 
-        if(id == R.id.menu_item_share_error)
-        {
+        if (id == R.id.menu_item_share_error) {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_SEND);
             intent.putExtra(Intent.EXTRA_TEXT, buildText());
@@ -269,13 +243,10 @@ public class ErrorActivity extends AppCompatActivity
         return false;
     }
 
-    private String formErrorText(String[] el)
-    {
+    private String formErrorText(String[] el) {
         StringBuilder sb = new StringBuilder();
-        if (el != null)
-        {
-            for (String e : el)
-            {
+        if (el != null) {
+            for (String e : el) {
                 sb.append("-------------------------------------\n");
                 sb.append(e);
             }
@@ -287,13 +258,11 @@ public class ErrorActivity extends AppCompatActivity
     /**
      * Get the activity to return to
      */
-    static Class<? extends Activity> getReturnActivity()
-    {
+    static Class<? extends Activity> getReturnActivity() {
         return MainActivity.class;
     }
 
-    private void goToReturnActivity()
-    {
+    private void goToReturnActivity() {
         Class<? extends Activity> checkedReturnActivity = getReturnActivity();
 
         Intent intent = new Intent(this, checkedReturnActivity);
@@ -301,8 +270,7 @@ public class ErrorActivity extends AppCompatActivity
         NavUtils.navigateUpTo(this, intent);
     }
 
-    private void buildInfo(ErrorInfo info)
-    {
+    private void buildInfo(ErrorInfo info) {
         TextView infoLabelView = findViewById(R.id.errorInfoLabelsView);
         TextView infoView = findViewById(R.id.errorInfosView);
         String text = "";
@@ -321,8 +289,7 @@ public class ErrorActivity extends AppCompatActivity
         infoView.setText(text);
     }
 
-    private String buildText()
-    {
+    private String buildText() {
         StringBuilder sb = new StringBuilder();
         sb.append("user_action: ").append(getUserActionString(errorInfo.userAction)).append("\n");
         sb.append("request: ").append(errorInfo.request).append("\n");
@@ -334,10 +301,8 @@ public class ErrorActivity extends AppCompatActivity
         sb.append("time: ").append(currentTimeStamp).append("\n");
 
         sb.append("\nexceptions:\n");
-        if (errorList != null)
-        {
-            for (String e : errorList)
-            {
+        if (errorList != null) {
+            for (String e : errorList) {
                 sb.append(e).append("\n");
             }
         }
@@ -348,20 +313,15 @@ public class ErrorActivity extends AppCompatActivity
 
     }
 
-    private String getUserActionString(UserAction userAction)
-    {
-        if (userAction == null)
-        {
+    private String getUserActionString(UserAction userAction) {
+        if (userAction == null) {
             return "Your description is in another castle.";
-        }
-        else
-        {
+        } else {
             return userAction.getMessage();
         }
     }
 
-    private String getContentLangString()
-    {
+    private String getContentLangString() {
         return Locale.getDefault().getLanguage();
     }
 
@@ -379,26 +339,21 @@ public class ErrorActivity extends AppCompatActivity
         goToReturnActivity();
     }
 
-    public String getCurrentTimeStamp()
-    {
+    public String getCurrentTimeStamp() {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.US);
         df.setTimeZone(TimeZone.getTimeZone("GMT"));
         return df.format(new Date());
     }
 
-    public static class ErrorInfo implements Parcelable
-    {
-        public static final Parcelable.Creator<ErrorInfo> CREATOR = new Parcelable.Creator<ErrorInfo>()
-        {
+    public static class ErrorInfo implements Parcelable {
+        public static final Parcelable.Creator<ErrorInfo> CREATOR = new Parcelable.Creator<ErrorInfo>() {
             @Override
-            public ErrorInfo createFromParcel(Parcel source)
-            {
+            public ErrorInfo createFromParcel(Parcel source) {
                 return new ErrorInfo(source);
             }
 
             @Override
-            public ErrorInfo[] newArray(int size)
-            {
+            public ErrorInfo[] newArray(int size) {
                 return new ErrorInfo[size];
             }
         };
@@ -408,36 +363,31 @@ public class ErrorActivity extends AppCompatActivity
         @StringRes
         final int message;
 
-        private ErrorInfo(UserAction userAction, String serviceName, String request, @StringRes int message)
-        {
+        private ErrorInfo(UserAction userAction, String serviceName, String request, @StringRes int message) {
             this.userAction = userAction;
             this.serviceName = serviceName;
             this.request = request;
             this.message = message;
         }
 
-        ErrorInfo(Parcel in)
-        {
+        ErrorInfo(Parcel in) {
             this.userAction = UserAction.valueOf(in.readString());
             this.request = in.readString();
             this.serviceName = in.readString();
             this.message = in.readInt();
         }
 
-        public static ErrorInfo make(UserAction userAction, String serviceName, String request, @StringRes int message)
-        {
+        public static ErrorInfo make(UserAction userAction, String serviceName, String request, @StringRes int message) {
             return new ErrorInfo(userAction, serviceName, request, message);
         }
 
         @Override
-        public int describeContents()
-        {
+        public int describeContents() {
             return 0;
         }
 
         @Override
-        public void writeToParcel(Parcel dest, int flags)
-        {
+        public void writeToParcel(Parcel dest, int flags) {
             dest.writeString(this.userAction.name());
             dest.writeString(this.request);
             dest.writeString(this.serviceName);

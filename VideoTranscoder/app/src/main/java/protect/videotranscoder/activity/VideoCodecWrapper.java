@@ -11,35 +11,28 @@ import protect.videotranscoder.media.VideoCodec;
  * Wrapper class for the VideoCodec, which reports both the code
  * and a help string.
  */
-public class VideoCodecWrapper
-{
+public class VideoCodecWrapper {
     final VideoCodec codec;
     final String helperText;
 
-    VideoCodecWrapper(VideoCodec codec, String helperText)
-    {
+    VideoCodecWrapper(VideoCodec codec, String helperText) {
         this.codec = codec;
         this.helperText = helperText;
     }
 
-    public String toString()
-    {
+    public String toString() {
         String text = codec.prettyName;
-        if(helperText != null)
-        {
+        if (helperText != null) {
             text += " (" + helperText + ")";
         }
         return text;
     }
 
-    static List<VideoCodecWrapper> wrap(Context context, List<VideoCodec> items)
-    {
+    static List<VideoCodecWrapper> wrap(Context context, List<VideoCodec> items) {
         LinkedList<VideoCodecWrapper> wrapped = new LinkedList<>();
-        for(VideoCodec codec : items)
-        {
+        for (VideoCodec codec : items) {
             String helperText = null;
-            if(codec.helperTextId != null)
-            {
+            if (codec.helperTextId != null) {
                 helperText = context.getResources().getString(codec.helperTextId);
             }
             wrapped.addLast(new VideoCodecWrapper(codec, helperText));

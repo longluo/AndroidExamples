@@ -1,9 +1,8 @@
 package com.longluo.demo.spinner;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.longluo.demo.R;
 import com.longluo.demo.spinner.widget.SpinnerTextView;

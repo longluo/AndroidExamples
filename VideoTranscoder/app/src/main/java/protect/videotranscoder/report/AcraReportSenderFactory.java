@@ -21,17 +21,16 @@ package protect.videotranscoder.report;
  */
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import org.acra.config.ACRAConfiguration;
 import org.acra.sender.ReportSender;
 import org.acra.sender.ReportSenderFactory;
 
-public class AcraReportSenderFactory implements ReportSenderFactory
-{
+public class AcraReportSenderFactory implements ReportSenderFactory {
     @NonNull
-    public ReportSender create(@NonNull Context context, @NonNull ACRAConfiguration config)
-    {
+    public ReportSender create(@NonNull Context context, @NonNull ACRAConfiguration config) {
         return new AcraReportSender();
     }
 }

@@ -83,6 +83,31 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(spinner, "Nothing selected", Snackbar.LENGTH_LONG).show();
             }
         });
+
+        initSpinnerTime();
+
+    }
+
+    private void initSpinnerTime() {
+        MaterialSpinner spinnerTime = findViewById(R.id.spinner_time);
+        String[] times = getResources().getStringArray(R.array.remote_lock_screen_time);
+        spinnerTime.setItems(times);
+        spinnerTime.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+
+            @Override
+            public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+                Snackbar.make(view, "Clicked " + item, Snackbar.LENGTH_LONG).show();
+            }
+        });
+
+        spinnerTime.setOnNothingSelectedListener(new MaterialSpinner.OnNothingSelectedListener() {
+
+            @Override
+            public void onNothingSelected(MaterialSpinner spinner) {
+                Snackbar.make(spinner, "Nothing selected", Snackbar.LENGTH_LONG).show();
+            }
+        });
+
     }
 
 }

@@ -1,5 +1,10 @@
 package protect.videotranscoder.service;
 
+import static protect.videotranscoder.activity.MainActivity.FFMPEG_FAILURE_MSG;
+import static protect.videotranscoder.activity.MainActivity.FFMPEG_OUTPUT_FILE;
+import static protect.videotranscoder.activity.MainActivity.MESSENGER_INTENT_KEY;
+import static protect.videotranscoder.activity.MainActivity.OUTPUT_MIMETYPE;
+
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -13,28 +18,18 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import java.io.File;
 import java.util.List;
 
 import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
-import nl.bravobit.ffmpeg.FFprobe;
+import protect.videoeditor.IFFmpegProcessService;
 import protect.videotranscoder.FFmpegUtil;
 import protect.videotranscoder.R;
 import protect.videotranscoder.activity.MainActivity;
-import protect.videoeditor.IFFmpegProcessService;
 
-import static protect.videotranscoder.activity.MainActivity.FFMPEG_FAILURE_MSG;
-import static protect.videotranscoder.activity.MainActivity.FFMPEG_OUTPUT_FILE;
-import static protect.videotranscoder.activity.MainActivity.MESSENGER_INTENT_KEY;
-import static protect.videotranscoder.activity.MainActivity.OUTPUT_MIMETYPE;
-
-public class FFmpegProcessService extends Service
-{
+public class FFmpegProcessService extends Service {
     private static final String TAG = "VideoTranscoder";
     private static final int NOTIFICATION_ID = 1;
     private static final String NOTIFICATION_CHANNEL_ID = TAG;
@@ -47,38 +42,31 @@ public class FFmpegProcessService extends Service
      * activity and this service can communicate back and forth. See "setUiCallback()"
      */
     @Override
-    public int onStartCommand(Intent intent, int flags, int startId)
-    {
+    public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i(TAG, "Received start command from activity");
         _activityMessenger = intent.getParcelableExtra(MESSENGER_INTENT_KEY);
         return START_NOT_STICKY;
     }
 
     @Override
-    public IBinder onBind(Intent intent)
-    {
+    public IBinder onBind(Intent intent) {
         Log.i(TAG, "Received binding.");
         return mBinder;
     }
 
-    private final IFFmpegProcessService.Stub mBinder = new IFFmpegProcessService.Stub()
-    {
+    private final IFFmpegProcessService.Stub mBinder = new IFFmpegProcessService.Stub() {
         @Override
-        public boolean startEncode(final List<String> ffmpegArgs, final String outputFile, final String mimetype, final int durationMs) throws RemoteException
-        {
+        public boolean startEncode(final List<String> ffmpegArgs, final String outputFile, final String mimetype, final int durationMs) throws RemoteException {
             boolean result = FFmpegUtil.init(getApplicationContext());
 
-            if (result)
-            {
+            if (result) {
                 final String[] args = ffmpegArgs.toArray(new String[ffmpegArgs.size()]);
 
                 sendMessage(MessageId.JOB_START_MSG, outputFile);
 
-                ExecuteBinaryResponseHandler handler = new ExecuteBinaryResponseHandler()
-                {
+                ExecuteBinaryResponseHandler handler = new ExecuteBinaryResponseHandler() {
                     @Override
-                    public void onFailure(String s)
-                    {
+                    public void onFailure(String s) {
                         Log.d(TAG, "Failed with output : " + s);
                         clearNotification();
 
@@ -92,8 +80,7 @@ public class FFmpegProcessService extends Service
                     }
 
                     @Override
-                    public void onSuccess(String s)
-                    {
+                    public void onSuccess(String s) {
                         Log.d(TAG, "Success with output : " + s);
                         clearNotification();
 
@@ -104,17 +91,14 @@ public class FFmpegProcessService extends Service
                     }
 
                     @Override
-                    public void onProgress(String s)
-                    {
+                    public void onProgress(String s) {
                         // Progress updates look like the following:
                         // frame=   15 fps=7.1 q=2.0 size=      26kB time=00:00:00.69 bitrate= 309.4kbits/s dup=6 drop=0 speed=0.329x
                         Long currentTimeMs = null;
 
                         String[] split = s.split(" ");
-                        for (String item : split)
-                        {
-                            if (item.startsWith("time="))
-                            {
+                        for (String item : split) {
+                            if (item.startsWith("time=")) {
                                 item = item.replace("time=", "");
                                 currentTimeMs = FFmpegUtil.timestampToMs(item);
                                 break;
@@ -123,8 +107,7 @@ public class FFmpegProcessService extends Service
 
                         Integer percentComplete = null;
 
-                        if (currentTimeMs != null && currentTimeMs > 0)
-                        {
+                        if (currentTimeMs != null && currentTimeMs > 0) {
                             percentComplete = (int) Math.floor((currentTimeMs * 100) / (float) durationMs);
                         }
 
@@ -132,15 +115,12 @@ public class FFmpegProcessService extends Service
                     }
                 };
 
-                if (outputFile != null)
-                {
+                if (outputFile != null) {
                     setNotification(new File(outputFile).getName());
                 }
 
                 FFmpegUtil.call(args, handler);
-            }
-            else
-            {
+            } else {
                 sendMessage(MessageId.FFMPEG_UNSUPPORTED_MSG, null);
             }
 
@@ -148,8 +128,7 @@ public class FFmpegProcessService extends Service
         }
 
         @Override
-        public void cancel() throws RemoteException
-        {
+        public void cancel() throws RemoteException {
             Log.i(TAG, "Received cancel");
 
             clearNotification();
@@ -162,22 +141,19 @@ public class FFmpegProcessService extends Service
         }
 
         @Override
-        public boolean isEncoding() throws RemoteException
-        {
+        public boolean isEncoding() throws RemoteException {
             return FFmpegUtil.isFFmpegRunning();
         }
     };
 
     @Override
-    public void onCreate()
-    {
+    public void onCreate() {
         super.onCreate();
         Log.i(TAG, "Service created");
     }
 
     @Override
-    public void onDestroy()
-    {
+    public void onDestroy() {
         super.onDestroy();
 
         _activityMessenger = null;
@@ -186,13 +162,11 @@ public class FFmpegProcessService extends Service
         Log.i(TAG, "Service destroyed");
     }
 
-    private void setNotification(String filename)
-    {
+    private void setNotification(String filename) {
         String message = String.format(getString(R.string.encodingNotification), filename);
 
         String channelId = "";
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-        {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             channelId = createNotificationChannel();
         }
 
@@ -214,36 +188,30 @@ public class FFmpegProcessService extends Service
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private String createNotificationChannel()
-    {
+    private String createNotificationChannel() {
         String channelId = NOTIFICATION_CHANNEL_ID;
         String channelName = getString(R.string.notificationChannelName);
         NotificationChannel chan = new NotificationChannel(channelId,
                 channelName, NotificationManager.IMPORTANCE_LOW);
         chan.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
-        NotificationManager service = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-        if(service != null)
-        {
+        NotificationManager service = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        if (service != null) {
             service.createNotificationChannel(chan);
-        }
-        else
-        {
+        } else {
             Log.w(TAG, "Could not get NotificationManager");
         }
 
         return channelId;
     }
 
-    private void clearNotification()
-    {
+    private void clearNotification() {
         stopForeground(true);
     }
 
     private void sendMessage(MessageId messageId, @Nullable Object params) {
         // If this service is launched by the JobScheduler, there's no callback Messenger. It
         // only exists when the MainActivity calls startService() with the callback in the Intent.
-        if (_activityMessenger == null)
-        {
+        if (_activityMessenger == null) {
             Log.d(TAG, "Service is bound, not started. There's no callback to send a message to.");
             return;
         }
@@ -251,12 +219,9 @@ public class FFmpegProcessService extends Service
         Message m = Message.obtain();
         m.what = messageId.ordinal();
         m.obj = params;
-        try
-        {
+        try {
             _activityMessenger.send(m);
-        }
-        catch (RemoteException e)
-        {
+        } catch (RemoteException e) {
             Log.e(TAG, "Error passing service object back to activity.", e);
         }
     }

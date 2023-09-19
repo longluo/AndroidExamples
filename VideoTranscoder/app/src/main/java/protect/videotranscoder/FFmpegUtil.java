@@ -2,7 +2,6 @@ package protect.videotranscoder;
 
 import android.content.Context;
 import android.graphics.Movie;
-import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -21,11 +20,11 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
-import nl.bravobit.ffmpeg.FFmpeg;
-import nl.bravobit.ffmpeg.FFprobe;
-import nl.bravobit.ffmpeg.exceptions.FFmpegCommandAlreadyRunningException;
-import nl.bravobit.ffmpeg.exceptions.FFprobeCommandAlreadyRunningException;
+//import nl.bravobit.ffmpeg.ExecuteBinaryResponseHandler;
+//import nl.bravobit.ffmpeg.FFmpeg;
+//import nl.bravobit.ffmpeg.FFprobe;
+//import nl.bravobit.ffmpeg.exceptions.FFmpegCommandAlreadyRunningException;
+//import nl.bravobit.ffmpeg.exceptions.FFprobeCommandAlreadyRunningException;
 import protect.videotranscoder.media.AudioCodec;
 import protect.videotranscoder.media.MediaInfo;
 import protect.videotranscoder.media.MediaContainer;

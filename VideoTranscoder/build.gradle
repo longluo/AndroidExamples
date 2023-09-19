@@ -2,12 +2,20 @@
 
 buildscript {
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/grails-core/' }
+        maven { url 'https://maven.aliyun.com/repository/apache-snapshots/' }
+
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.0'
+        classpath 'com.android.tools.build:gradle:4.2.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -16,15 +24,22 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        maven { url "https://maven.google.com" }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/grails-core/' }
+        maven { url 'https://maven.aliyun.com/repository/apache-snapshots/' }
         maven { url "https://jitpack.io" }
+
+        google()
         jcenter()
-        flatDir {
-            dirs 'libs'
-        }
+
+        mavenLocal()
     }
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

@@ -1,7 +1,5 @@
 package protect.videotranscoder.media;
 
-import android.provider.MediaStore;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -10,8 +8,7 @@ import java.util.List;
 /**
  * List of video and audio containers the application may support
  */
-public enum MediaContainer
-{
+public enum MediaContainer {
     // Video and audio:
     AVI("avi", "avi", "video/avi", Arrays.asList(VideoCodec.AVI), Arrays.asList(AudioCodec.MP3)),
     FLV("flv", "flv", "video/x-flv", Collections.singletonList(VideoCodec.H264), Arrays.asList(AudioCodec.AAC, AudioCodec.MP3, AudioCodec.NONE)),
@@ -32,8 +29,7 @@ public enum MediaContainer
     public final List<VideoCodec> supportedVideoCodecs;
     public final List<AudioCodec> supportedAudioCodecs;
 
-    MediaContainer(String ffmpegName, String extension, String mimetype, List<VideoCodec> videoCodecs, List<AudioCodec> audioCodecs)
-    {
+    MediaContainer(String ffmpegName, String extension, String mimetype, List<VideoCodec> videoCodecs, List<AudioCodec> audioCodecs) {
         this.ffmpegName = ffmpegName;
         this.extension = extension;
         this.mimetype = mimetype;
@@ -41,14 +37,10 @@ public enum MediaContainer
         this.supportedAudioCodecs = Collections.unmodifiableList(audioCodecs);
     }
 
-    public static MediaContainer fromName(String ffmpegName)
-    {
-        if(ffmpegName != null)
-        {
-            for (MediaContainer item : MediaContainer.values())
-            {
-                if (item.ffmpegName.endsWith(ffmpegName))
-                {
+    public static MediaContainer fromName(String ffmpegName) {
+        if (ffmpegName != null) {
+            for (MediaContainer item : MediaContainer.values()) {
+                if (item.ffmpegName.endsWith(ffmpegName)) {
                     return item;
                 }
             }
@@ -58,8 +50,7 @@ public enum MediaContainer
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return ffmpegName;
     }
 }

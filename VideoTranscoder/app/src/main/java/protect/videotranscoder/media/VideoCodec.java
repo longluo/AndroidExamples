@@ -1,6 +1,6 @@
 package protect.videotranscoder.media;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -11,8 +11,7 @@ import protect.videotranscoder.R;
 /**
  * List of video codecs which the application may support
  */
-public enum VideoCodec
-{
+public enum VideoCodec {
     // This is the built-in avi encoder instead of using the external libxvid library.
     AVI("mpeg4", "AVI", Arrays.asList("-vtag", "xvid"), null),
     // The 'preset' setting for h264 is changed from its default of 'medium'. The
@@ -33,8 +32,7 @@ public enum VideoCodec
     public final List<String> extraFfmpegArgs;
     public final Integer helperTextId;
 
-    VideoCodec(String ffmpegName, String prettyName, List<String> extraFfmpegArgs, Integer helperTextId)
-    {
+    VideoCodec(String ffmpegName, String prettyName, List<String> extraFfmpegArgs, Integer helperTextId) {
         this.ffmpegName = ffmpegName;
         this.prettyName = prettyName;
         this.extraFfmpegArgs = extraFfmpegArgs;
@@ -42,14 +40,10 @@ public enum VideoCodec
     }
 
     @Nullable
-    public static VideoCodec fromName(String name)
-    {
-        if(name != null)
-        {
-            for (VideoCodec item : values())
-            {
-                if (item.ffmpegName.equals(name) || item.prettyName.equalsIgnoreCase(name))
-                {
+    public static VideoCodec fromName(String name) {
+        if (name != null) {
+            for (VideoCodec item : values()) {
+                if (item.ffmpegName.equals(name) || item.prettyName.equalsIgnoreCase(name)) {
                     return item;
                 }
             }

@@ -1,10 +1,16 @@
 package com.longluo.demo;
 
 import android.content.Intent;
+import android.graphics.ImageDecoder;
+import android.graphics.drawable.Animatable2;
+import android.graphics.drawable.AnimatedImageDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +24,7 @@ import com.longluo.demo.okhttpthree.Okhttp3Activity;
 import com.longluo.demo.okhttpthree.eiken.ENRequestBase;
 import com.longluo.demo.okhttpthree.eiken.ENRequestGetReceipt;
 import com.longluo.demo.okhttpthree.eiken.SGLogHelper;
+import com.longluo.demo.progressbar.ProgressBarActivity;
 import com.longluo.demo.spinner.CustomSpinnerActivity;
 import com.longluo.demo.spinner.spinnerday.SpinnerDayActivity;
 import com.longluo.demo.view.DatePickerDialogActivity;
@@ -25,6 +32,7 @@ import com.longluo.demo.view.RadioButtonPhoneMoneyActivity;
 import com.longluo.demo.view.dragchoose.DragChooseActivity;
 import com.longluo.demo.view.dragtotarget.DragListItemToTargetActivity;
 
+import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -39,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btn_to_radiobutton_phone_money;
     Button btn_to_drag_list_item_to_target;
     Button btn_to_drag_choose;
+
+    Button btnProgressBar;
 
     ConcurrentHashMap<String, Long> lastBillingOkTimeMap = new ConcurrentHashMap<>();
 
@@ -88,6 +98,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_to_drag_choose = findViewById(R.id.btn_to_drag_choose);
         btn_to_drag_choose.setOnClickListener(this);
 
+        btnProgressBar = findViewById(R.id.btn_progressbar);
+        btnProgressBar.setOnClickListener(this);
     }
 
     @Override
@@ -153,6 +165,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_to_drag_choose:
                 Intent intent8 = new Intent(this, DragChooseActivity.class);
                 startActivity(intent8);
+                break;
+
+            case R.id.btn_progressbar:
+                Intent intent9 = new Intent(this, ProgressBarActivity.class);
+                startActivity(intent9);
                 break;
 
         }

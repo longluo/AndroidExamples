@@ -47,6 +47,8 @@
         <activity android:name=".view.RadioButtonPhoneMoneyActivity" />
         <activity android:name=".view.dragtotarget.DragListItemToTargetActivity" />
         <activity android:name=".view.dragchoose.DragChooseActivity" />
+
+        <activity android:name=".progressbar.ProgressBarActivity" />
     </application>
 
 </manifest>

@@ -5,8 +5,7 @@ import java.io.File;
 /**
  * Container with information about a media file
  */
-public class MediaInfo
-{
+public class MediaInfo {
     public final File file;
     public final long durationMs;
     public final MediaContainer container;
@@ -24,8 +23,7 @@ public class MediaInfo
     public MediaInfo(File file, long durationMs, MediaContainer container, VideoCodec videoCodec,
                      String videoResolution, Integer videoBitrateK, String videoFramerate,
                      AudioCodec audioCodec, Integer audioSampleRate, Integer audioBitrateK,
-                     Integer audioChannels)
-    {
+                     Integer audioChannels) {
         this.file = file;
         this.durationMs = durationMs;
         this.container = container;
@@ -43,28 +41,22 @@ public class MediaInfo
      * Determines the name of the file with the extension stripped.
      * If the name has been overridden, that value is returned instead.
      */
-    public String getFileBaseName()
-    {
+    public String getFileBaseName() {
         String basename;
 
-        if(overrideBaseName == null)
-        {
+        if (overrideBaseName == null) {
             basename = file.getName();
-            if(basename.contains("."))
-            {
+            if (basename.contains(".")) {
                 basename = basename.substring(0, basename.lastIndexOf("."));
             }
-        }
-        else
-        {
+        } else {
             basename = overrideBaseName;
         }
 
         return basename;
     }
 
-    public void setFileBaseName(String name)
-    {
+    public void setFileBaseName(String name) {
         overrideBaseName = name;
     }
 }

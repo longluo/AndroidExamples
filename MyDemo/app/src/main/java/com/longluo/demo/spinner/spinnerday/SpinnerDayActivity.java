@@ -41,18 +41,23 @@ public class SpinnerDayActivity extends AppCompatActivity {
         spYear = findViewById(R.id.sp_year);
         spMonth = findViewById(R.id.sp_month);
         spDay = findViewById(R.id.sp_day);
+
         btnSpinnerSure = findViewById(R.id.btn_spinner_sure);
+
         //制造数据源
         makeDateData();
+
         //年适配
         adapterSpYear = new ArrayAdapter<String>(this, R.layout.spinner_date_item, dataYear);
         adapterSpYear.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spYear.setAdapter(adapterSpYear);
         spYear.setSelection(yearSelection);// 默认选中今年
+
         //月适配
         adapterSpMonth = new ArrayAdapter<String>(this, R.layout.spinner_date_item, dataMonth);
         adapterSpMonth.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spMonth.setAdapter(adapterSpMonth);
+
         //日适配
         adapterSpDay = new ArrayAdapter<String>(this, R.layout.spinner_date_item, dataDay);
         adapterSpDay.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -106,6 +111,4 @@ public class SpinnerDayActivity extends AppCompatActivity {
             dataMonth.add("" + (i < 10 ? "0" + i : i));
         }
     }
-
-
 }

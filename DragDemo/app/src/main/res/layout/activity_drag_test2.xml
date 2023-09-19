@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green">
+    android:background="@color/transparent"
+    tools:context=".DragTest2Activity">
 
     <SurfaceView
         android:id="@+id/surface_stream"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:src="@color/transparent" />
+
     <com.longluo.dragdemo.StreamStatusView
         android:id="@+id/stream_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        tools:ignore="MissingConstraints" />
+        android:layout_gravity="top|center" />
 
     <com.longluo.dragdemo.FloatBallView
         android:id="@+id/float_ball"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        tools:ignore="MissingConstraints" />
+        android:layout_gravity="center" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_gravity="end|bottom"
+        android:src="@color/transparent" />
+
+</FrameLayout>
 
