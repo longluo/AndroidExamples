@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white2"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/openEditTextFloat"
+            style="@style/TextStyle2"
+            android:layout_marginTop="120dp"
+            android:text="OpenEditTextFloat" />
+
+    <TextView
+            android:id="@+id/openJavaTestActivity"
+            style="@style/TextStyle2"
+            android:layout_marginTop="20dp"
+            android:text="OpenJavaTestActivity" />
+
+    <TextView
+            android:id="@+id/changeBackground"
+            style="@style/TextStyle2"
+            android:layout_marginTop="20dp"
+            android:text="改变首页系统浮窗1的背景" />
+
+    <TextView
+            android:id="@+id/recoverBackground"
+            style="@style/TextStyle2"
+            android:layout_marginTop="20dp"
+            android:text="恢复首页系统浮窗1的背景" />
+
+</LinearLayout>

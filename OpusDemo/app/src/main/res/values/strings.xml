@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">OpusAudioDemo_so</string>
+    <string name="start_record">开始录音</string>
+    <string name="play_opus_and_save_pcm">播放OPUS(同时保存解码后的pcm文件)</string>
+    <string name="play_pcm">播放PCM</string>
+    <string name="permission_denied">所需权限被拒绝</string>
+    <string name="record_permission_denied">录音权限未获得</string>
+    <string name="play_error">播放异常</string>
+    <string name="stop_record">停止录音</string>
+    <string name="play_opus_error">播放OPUS异常</string>
+    <string name="stop_opus">停止播放OPUS</string>
+    <string name="play_pcm_error">播放PCM异常</string>
+    <string name="stop_pcm">停止播放PCM</string>
+</resources>

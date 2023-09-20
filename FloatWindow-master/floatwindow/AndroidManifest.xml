@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yhao.floatwindow"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <application>
+        <activity
+            android:name="com.yhao.floatwindow.FloatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+
+        <!--plan： 调整为默认注册-->
+        <!--<receiver android:name="com.yhao.floatwindow.impl.FloatLifecycleReceiver">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+    </application>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+</manifest>

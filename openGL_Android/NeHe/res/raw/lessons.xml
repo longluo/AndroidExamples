@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lessons>
+	<lesson>
+		<id>1</id>
+		<title>1. Setup</title>
+		<image>drawable/lesson01</image>
+		<description>Setup OpenGL ES in Android environment.</description>
+	</lesson>
+	<lesson>
+		<id>2</id>
+		<title>2. Triangles</title>
+		<image>drawable/lesson02</image>
+		<description>Draw a triangle and a square (made from two triangles). Setup vertex array buffers.</description>
+	</lesson>
+	<lesson>
+		<id>3</id>
+		<title>3. Colors</title>
+		<image>drawable/lesson03</image>
+		<description>Color objects by using smooth coloring (triangle) or flat coloring (square).</description>
+	</lesson>
+	<lesson>
+		<id>4</id>
+		<title>4. Rotation</title>
+		<image>drawable/lesson04</image>
+		<description>Add animation to the scene using rotations. The two objects rotate on different axes.</description>
+	</lesson>
+	<lesson>
+		<id>5</id>
+		<title>5. 3D Shapes</title>
+		<image>drawable/lesson05</image>
+		<description>Go solid by turning the triangle into a pyramid and the square into a cube.</description>
+	</lesson>
+	<lesson>
+		<id>6</id>
+		<title>6. Texture Mapping</title>
+		<image>drawable/lesson06</image>
+		<description>Render a cube textured with a bitmap image.</description>
+	</lesson>
+	<lesson>
+		<id>7</id>
+		<title>7. Texture Filters &amp; Lighting</title>
+		<image>drawable/lesson07</image>
+		<description>Build textures with different types of filtering: nearest, linear and mipmap. Uses simple lighting.</description>
+	</lesson>
+	<lesson>
+		<id>8</id>
+		<title>8. Blending</title>
+		<image>drawable/lesson08</image>
+		<description>Achieve the effect of transparency using blending. Introducing the 4th color component: 'alpha'.</description>
+	</lesson>
+	<lesson>
+		<id>9</id>
+		<title>9. Bitmap Animation</title>
+		<image>drawable/lesson09</image>
+		<description>Simple animation using blended 2D sprites. Makes heavier use of model-view transformations.</description>
+	</lesson>
+	<lesson>
+		<id>16</id>
+		<title>16. Fog</title>
+		<image>drawable/lesson16</image>
+		<description>One of the simplest, yet most impressive OpenGL effects. Illustrates 3 different fog filters.</description>
+	</lesson>
+	<lesson>
+		<id>18</id>
+		<title>18. Quadrics</title>
+		<image>drawable/lesson18</image>
+		<description>Draw complex objects like spheres, cylinders, disks and cones. Some math is used behind this.</description>
+	</lesson>
+	<lesson>
+		<id>23</id>
+		<title>23. Sphere Mapping</title>
+		<image>drawable/lesson23</image>
+		<description>Add reflections to the quadrics from lesson 18 by using sphere mapping. Some tricky math here too.</description>
+	</lesson>
+</lessons>

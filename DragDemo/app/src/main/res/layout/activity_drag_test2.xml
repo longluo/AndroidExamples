@@ -22,13 +22,14 @@
         android:id="@+id/stream_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|center" />
+        android:layout_gravity="top|center"
+        android:visibility="gone" />
 
     <com.longluo.dragdemo.FloatBallView
         android:id="@+id/float_ball"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_gravity="end|center" />
 
     <ImageView
         android:layout_width="1dp"

@@ -1,0 +1,63 @@
+buildscript {
+    ext.kotlin_version = '1.7.20'
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task readme {
+    doLast {
+        def input = new File("./README_TEMPLATE.md")
+        def output = new File("./README.md")
+
+        def reader = new DataInputStream(new BufferedInputStream(new FileInputStream(input))).newReader()
+        def builder = new StringBuilder()
+        def next
+
+        while ((next = reader.readLine()) != null) {
+            builder.append(next).append("\n")
+        }
+
+        def version = project(':noise').version
+        def template = builder.toString().replace("{{version}}", version)
+
+        def writer = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(output))).newWriter()
+
+        writer.write(template)
+        writer.flush()
+
+        println("README.md generated from template")
+    }
+}
+
+task release(dependsOn: [":readme"]) {
+    doLast {
+        exec {
+            executable 'git'
+            args 'tag', '-a', "${project(':noise').version}", '-m', "Release ${project(':noise').version}"
+        }
+
+        println("Successfully tagged new release (${project(':noise').version}).")
+        println("Push manually!")
+    }
+}

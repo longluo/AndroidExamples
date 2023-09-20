@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="send_general_broadcast">发送广播</string>
+    <string name="send_local_broadcast">发送Local广播</string>
+    <string name="send_ordered_broadcast">发送有序广播</string>
+    <string name="send_sticky_broadcast">发送Sticky广播</string>
+    <string name="general_broadcast_msg">普通广播告知：好声音马上开始了啦</string>
+    <string name="local_broadcast_msg">Local广播告知：好声音马上开始了啦</string>
+    <string name="ordered_broadcast_msg">有序广播告知：好声音马上开始了啦</string>
+    <string name="sticky_broadcast_msg">Sticky广播告知：好声音马上开始了啦</string>
+    <string name="sticky_broadcast_wait_tip">请等候<xliff:g>%1$s</xliff:g>毫秒</string>
+    <string name="ordered_broadcast_high_tip">优先级最高的接收者接收到广播，内容为： <xliff:g>%1$s</xliff:g></string>
+    <string name="ordered_broadcast_medium_tip">优先级中等的接收者接收到广播，内容为： <xliff:g>%1$s</xliff:g>，上一个接收者为：<xliff:g>%2$s</xliff:g></string>
+    <string name="ordered_broadcast_medium_cancel_tip">优先级中等的接收者接收到广播并已取消广播继续传递，内容为： <xliff:g>%1$s</xliff:g>，上一个接收者为：<xliff:g>%2$s</xliff:g></string>
+    <string name="ordered_broadcast_low_tip">优先级最低的接收者接收到广播，内容为： <xliff:g>%1$s</xliff:g>，上一个接收者为：<xliff:g>%2$s</xliff:g></string>
+    <string name="ordered_broadcast_tip">默认优先级接收者接收到广播，内容为： <xliff:g>%1$s</xliff:g>，上一个接收者为：<xliff:g>%2$s</xliff:g></string>
+    
+    <string name="start_general_service">启动普通服务</string>
+    <string name="stop_general_service">停止普通服务</string>
+    <string name="start_intent_service">启动Intent Service</string>
+    <string name="bound_service">绑定服务</string>
+    <string name="operate_bound_service">增加绑定服务的count属性</string>
+    <string name="get_bound_service_pro">获取绑定服务的count属性</string>
+    <string name="unbound_service">解除绑定服务</string>
+    <string name="start_aidl_service">启动AIDL服务</string>
+    <string name="stop_aidl_service">停止AIDL服务</string>
+    <string name="operate_value_success">增加成功，当前值为： <xliff:g>%1$s</xliff:g></string>
+    <string name="operate_value_tip">当前值为： <xliff:g>%1$s</xliff:g></string>
+    <string name="bind_service_tip">请先绑定服务</string>
+    
+    <string name="app_status_download">点击下载美丽说APK</string>
+    <string name="app_status_downloaded">已下载过，点击重新下载</string>
+    <string name="app_status_download_fail">下载失败，点击重新下载</string>
+    <string name="progress_tip">下载进度:</string>
+    <string name="download_notification_title">美丽说</string>
+    <string name="download_begin">开始下载</string>
+    <string name="download_fail">下载失败</string>
+    <string name="app_status_pending">等待下载</string>
+    <string name="app_status_pause">暂停</string>
+    <string name="app_status_downloading">下载中</string>
+    <string name="tip_download_file">文件将下载到：</string>
+    
+    <string name="auto_scroll_view_pager_inner">ViewPager嵌套示例</string>
+    
+    <string name="update_at">更新于:&#160;</string>
+    
+    <string name="profile">个人主页:&#160;</string>
+    <string name="description">更多介绍:&#160;</string>
+    <string name="http_cache_get">获取内容</string>
+    
+    <string name="drop_down_tip">下拉刷新或滚动到底部加载更多</string>
+    <string name="on_border_tip">滚动到顶部或底部进行体验</string>
+    
+    <string name="desc_search_view">SearchView介绍及搜索提示实现</string>
+    <string name="desc_view_pager_multi_page">viewpager实现画廊效果</string>
+    <string name="desc_download_manager">系统下载管理使用</string>
+    <string name="desc_slide_gallery">Gallery滑动一页(一个Item)效果</string>
+    <string name="desc_view_pager">ViewPager、Fragment使用</string>
+    <string name="desc_service">Service介绍</string>
+    <string name="desc_broadcast_receiver">BroadcastReceiver介绍</string>
+    <string name="desc_border_scroll_view">BorderScrollViewDemo介绍</string>
+    <string name="desc_drop_down_listview">下拉刷新及底部加载更多Listview</string>
+    <string name="desc_image_cache">ImageCache使用</string>
+    <string name="desc_image_sdcard_cache">ImageSDCardCache使用</string>
+    <string name="desc_http_cache">HttpCache使用</string>
+    <string name="desc_auto_scroll_view_pager_inner">自动滚动ViewPager嵌套使用</string>
+    <string name="desc_auto_scroll_view_pager">自动滚动ViewPager使用</string>
+    <string name="desc_default">Trinea</string>
+</resources>

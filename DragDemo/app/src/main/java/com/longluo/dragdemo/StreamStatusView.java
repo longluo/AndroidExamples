@@ -1,6 +1,7 @@
 package com.longluo.dragdemo;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,15 +13,17 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import timber.log.Timber;
+
 public class StreamStatusView extends LinearLayout {
 
     private static final String TAG = StreamStatusView.class.getSimpleName();
 
     private Context mContext;
 
-    private int width;
+    private int mViewWidth;
 
-    private int height;
+    private int mViewHeight;
 
     private int screenWidth;
 
@@ -31,6 +34,9 @@ public class StreamStatusView extends LinearLayout {
     private float mLastY;
 
     private boolean isDrag = false;
+
+    private boolean isClickInStreamStatus = false;
+
     private View mRootView;
 
     private TextView mTvLatency;
@@ -49,7 +55,7 @@ public class StreamStatusView extends LinearLayout {
 
     private long mCurrentTime;
 
-    private OnClickListener mListener;
+    private OnListener mListener;
 
     public StreamStatusView(Context context) {
         this(context, null);
@@ -83,10 +89,10 @@ public class StreamStatusView extends LinearLayout {
         mIvClose.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "mIvClose & Close");
+                Log.d(TAG, "StreamStatusView mIvClose & Close");
 
-                if (mRootView != null) {
-                    mRootView.setVisibility(View.GONE);
+                if (mListener != null) {
+                    mListener.hide();
                 }
             }
         });
@@ -103,101 +109,161 @@ public class StreamStatusView extends LinearLayout {
         super.onDetachedFromWindow();
     }
 
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+
+        mViewWidth = getWidth();
+        mViewHeight = getHeight();
+
+        Log.d(TAG, "onDraw: w = " + mViewWidth + ", h = " + mViewHeight);
+    }
+
     public boolean isDrag() {
         return isDrag;
+    }
+
+    @Override
+    public boolean onHoverEvent(MotionEvent event) {
+        Timber.i("StatusView onHoverEvent: %s", event.getAction());
+
+        int action = event.getAction();
+
+        if (action == MotionEvent.ACTION_HOVER_ENTER) {
+
+        } else if (action == MotionEvent.ACTION_HOVER_EXIT) {
+
+        }
+
+        return super.onHoverEvent(event);
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-        width = getMeasuredWidth();
-        height = getMeasuredHeight();
+        mViewWidth = getMeasuredWidth();
+        mViewHeight = getMeasuredHeight();
+
+        Log.d(TAG, "onMeasure: w = " + mViewWidth + ", h = " + mViewHeight);
 
         screenWidth = ScreenUtil.getScreenWidth(mContext);
         screenHeight = ScreenUtil.getScreenHeight(mContext);
     }
 
     @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        super.onLayout(changed, l, t, r, b);
+
+        Log.d(TAG, "onLayout: StreamStatus changed = " + changed + ", l=" + l + ",t=" + t + ", r = " + r + ", b = " + b);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        Timber.i(TAG, "StatusView dispatchTouchEvent: (%s, %s), action = %s", event.getX(), event.getY(), event.getAction());
+
+//        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+//
+//            return true;
+//        }
+
+        return super.dispatchTouchEvent(event);
+    }
+
+    @Override
     public boolean onTouchEvent(MotionEvent event) {
         super.onTouchEvent(event);
-        int action = event.getAction();
 
-        if (this.isEnabled()) {
-            switch (action) {
-                case MotionEvent.ACTION_DOWN:
-                    isDrag = false;
-                    mLastX = event.getX();
-                    mLastY = event.getY();
-                    mLastTime = System.currentTimeMillis();
-                    break;
+        float currentX = event.getX();
+        float currentY = event.getY();
 
-                case MotionEvent.ACTION_MOVE:
-                    Log.d(TAG, "ACTION_MOVE");
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                Timber.i("fix StatusView ACTION_DOWN");
+                isDrag = false;
+                mLastX = event.getX();
+                mLastY = event.getY();
+                mLastTime = System.currentTimeMillis();
+                break;
 
-                    final float xDistance = event.getX() - mLastX;
-                    final float yDistance = event.getY() - mLastY;
+            case MotionEvent.ACTION_MOVE:
+                Timber.i("fix StatusView ACTION_MOVE");
 
-                    int l, r, t, b;
+                final float xDistance = currentX - mLastX;
+                final float yDistance = currentY - mLastY;
 
-                    //当水平或者垂直滑动距离大于10,才算拖动事件
-                    if (Math.abs(xDistance) > 10 || Math.abs(yDistance) > 10) {
-                        Log.d(TAG, "Drag");
+                mCurrentTime = System.currentTimeMillis();
 
-                        isDrag = true;
-                        l = (int) (getLeft() + xDistance);
-                        r = l + width;
-                        t = (int) (getTop() + yDistance);
-                        b = t + height;
+                int l, r, t, b;
 
-                        //不划出边界判断,此处应按照项目实际情况,因为本项目需求移动的位置是手机全屏,
-                        // 所以才能这么写,如果是固定区域,要得到父控件的宽高位置后再做处理
-                        if (l < 0) {
-                            l = 0;
-                            r = l + width;
-                        } else if (r > screenWidth) {
-                            r = screenWidth;
-                            l = r - width;
-                        }
-                        if (t < 0) {
-                            t = 0;
-                            b = t + height;
-                        } else if (b > screenHeight) {
-                            b = screenHeight;
-                            t = b - height;
-                        }
+                // 当水平或者垂直滑动距离大于10,才算拖动事件
+                if (Math.abs(xDistance) > 10 || Math.abs(yDistance) > 10) {
+                    Timber.i("StatusView Drag");
 
-                        this.layout(l, t, r, b);
+                    isDrag = true;
+                    l = (int) (getLeft() + xDistance);
+                    r = l + mViewWidth;
+                    t = (int) (getTop() + yDistance);
+                    b = t + mViewHeight;
+
+                    //不划出边界判断,此处应按照项目实际情况,因为本项目需求移动的位置是手机全屏,
+                    // 所以才能这么写,如果是固定区域,要得到父控件的宽高位置后再做处理
+                    if (l < 0) {
+                        l = 0;
+                        r = l + mViewWidth;
+                    } else if (r > screenWidth) {
+                        r = screenWidth;
+                        l = r - mViewWidth;
                     }
-                    break;
-
-                case MotionEvent.ACTION_UP:
-                    mCurrentTime = System.currentTimeMillis();
-
-                    if (mCurrentTime - mLastTime < 800L && Math.abs(event.getX() - mLastX) < 10
-                            && Math.abs(event.getY() - mLastY) < 10) {
-
-                        Log.d(TAG, "ACTION_UP current Time = " + mCurrentTime);
+                    if (t < 0) {
+                        t = 0;
+                        b = t + mViewHeight;
+                    } else if (b > screenHeight) {
+                        b = screenHeight;
+                        t = b - mViewHeight;
                     }
-                    setPressed(false);
-                    break;
 
-                case MotionEvent.ACTION_CANCEL:
-                    setPressed(false);
-                    break;
+                    this.layout(l, t, r, b);
+                }
+                break;
 
-                default:
-                    break;
-            }
+            case MotionEvent.ACTION_UP:
+                Timber.i("fix StatusView ACTION_UP");
 
-            return true;
+                mCurrentTime = System.currentTimeMillis();
+
+                long deltaTime = mCurrentTime - mLastTime;
+
+                if (deltaTime < 800L && Math.abs(event.getX() - mLastX) < 10
+                        && Math.abs(event.getY() - mLastY) < 10) {
+                    Timber.i("StatusView ACTION_UP Click %s", deltaTime);
+                }
+                setPressed(false);
+                break;
+
+            case MotionEvent.ACTION_CANCEL:
+                setPressed(false);
+                break;
+
+            default:
+                break;
         }
 
-        return false;
+        Timber.i("StatusView onTouchEvent");
+
+        return true;
+    }
+
+    public int[] getmViewSize() {
+        return new int[]{mViewWidth, mViewHeight};
+    }
+
+    public void setmViewWidth(int mViewWidth) {
+        this.mViewWidth = mViewWidth;
     }
 
     public void setStreamLatency(int latency) {
-        Log.d(TAG, "setStreamLatency latency = " + latency);
+        Timber.d("setStreamLatency latency = " + latency);
 
         mLatency = latency;
 
@@ -205,15 +271,18 @@ public class StreamStatusView extends LinearLayout {
     }
 
     public void setStreamFps(int fps) {
-        Log.d(TAG, "setStreamLatency fps =" + fps);
+        Timber.d("setStreamLatency fps =" + fps);
 
         mFps = fps;
 
         mTvFps.setText(String.valueOf(fps));
     }
 
-    public void setClickListener(OnClickListener listener) {
+    public void setListener(OnListener listener) {
         mListener = listener;
     }
 
+    public interface OnListener {
+        void hide();
+    }
 }

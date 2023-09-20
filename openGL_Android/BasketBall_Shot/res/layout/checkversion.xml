@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/FrameLayout01" 
+   android:layout_width="fill_parent" 
+   android:layout_height="fill_parent"   >   
+<LinearLayout 
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:paddingLeft="10dip"
+	android:paddingRight="10dip"
+	android:paddingTop="10dip"
+	android:paddingBottom="10dip"
+	android:gravity="center">
+<LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<TextView   
+		android:layout_width="fill_parent"   
+		android:layout_height="wrap_content"
+		android:text="对不起，由于您的手机没有显卡，不能进入游戏。"
+		android:textSize="18dip"
+		android:textColor="#ffffff"
+		android:paddingLeft="10dip"/>
+</LinearLayout> 
+<LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:gravity="center">  
+	<Button   
+		android:text="确定" 
+		android:id="@+id/ok_button" 
+		android:layout_width="75dip" 
+		android:layout_height="40dip"
+		android:textSize="18dip"
+		android:gravity="center"/> 
+</LinearLayout> 	
+</LinearLayout>
+</LinearLayout>

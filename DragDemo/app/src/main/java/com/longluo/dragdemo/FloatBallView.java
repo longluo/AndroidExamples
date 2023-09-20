@@ -6,11 +6,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+
+import timber.log.Timber;
 
 
 public class FloatBallView extends LinearLayout {
@@ -62,6 +65,10 @@ public class FloatBallView extends LinearLayout {
 
         mContext = context;
 
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        setLayoutParams(params);
+
         initView();
     }
 
@@ -73,27 +80,20 @@ public class FloatBallView extends LinearLayout {
         mIvRingLatency = rootView.findViewById(R.id.iv_ring_status);
 
         mTvLatency = rootView.findViewById(R.id.tv_latency);
-
-//        mRootView.setOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (mListener != null) {
-//                    mListener.onClick(v);
-//                }
-//            }
-//        });
     }
 
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
 
+        Log.d(TAG, "onAttachedToWindow");
     }
 
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
 
+        Log.d(TAG, "onDetachedFromWindow");
     }
 
     public boolean isDrag() {
@@ -124,6 +124,16 @@ public class FloatBallView extends LinearLayout {
 
         screenWidth = ScreenUtil.getScreenWidth(mContext);
         screenHeight = ScreenUtil.getScreenHeight(mContext);
+
+        Timber.i("onMeasure: FloatBall w = %s, h = %s, mScreenWidth: w = %s, h = %s",
+                width, height, screenWidth, screenHeight);
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        super.onLayout(changed, l, t, r, b);
+
+        Log.d(TAG, "onLayout: FloatBall changed = " + changed + ", l=" + l + ",t=" + t + ", r = " + r + ", b = " + b);
     }
 
     @Override
@@ -178,6 +188,7 @@ public class FloatBallView extends LinearLayout {
                         t = b - height;
                     }
 
+                    Log.d(TAG, "ACTION_MOVE & layout l=" + l + ",t=" + t + ",r=" + r + ",b=" + b);
                     this.layout(l, t, r, b);
                 }
                 break;
@@ -189,7 +200,7 @@ public class FloatBallView extends LinearLayout {
 
                 if (deltaTime < 800L && Math.abs(event.getX() - mLastX) < 10
                         && Math.abs(event.getY() - mLastY) < 10) {
-                    Log.d(TAG, "ACTION_UP Click" + deltaTime);
+                    Log.d(TAG, "ACTION_UP Click = " + deltaTime);
                     performClick();
                 }
                 setPressed(false);

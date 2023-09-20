@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ro.brite.android.nehe"
+    android:versionCode="1"
+    android:versionName="0.1" >
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".LessonsList"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ro.brite.android.nehe01.GlApp"
+            android:label="Setup" />
+        <activity
+            android:name="ro.brite.android.nehe02.GlApp"
+            android:label="Triangles" />
+        <activity
+            android:name="ro.brite.android.nehe03.GlApp"
+            android:label="Colors" />
+        <activity
+            android:name="ro.brite.android.nehe04.GlApp"
+            android:label="Rotation" />
+        <activity
+            android:name="ro.brite.android.nehe05.GlApp"
+            android:label="3D Shapes" />
+        <activity
+            android:name="ro.brite.android.nehe06.GlApp"
+            android:label="Texture Mapping" />
+        <activity
+            android:name="ro.brite.android.nehe07.GlApp"
+            android:label="Texture Filters &amp; Lighting" />
+        <activity
+            android:name="ro.brite.android.nehe08.GlApp"
+            android:label="Blending" />
+        <activity
+            android:name="ro.brite.android.nehe09.GlApp"
+            android:label="Bitmap Animation" />
+        <activity
+            android:name="ro.brite.android.nehe16.GlApp"
+            android:label="Fog" />
+        <activity
+            android:name="ro.brite.android.nehe18.GlApp"
+            android:label="Quadrics" />
+        <activity
+            android:name="ro.brite.android.nehe23.GlApp"
+            android:label="Sphere Mapping" />
+    </application>
+
+    <uses-sdk android:minSdkVersion="3" />
+
+</manifest>

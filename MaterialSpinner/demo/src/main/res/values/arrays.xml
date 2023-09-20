@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="buy_mode">
+        <item>包月</item>
+        <item>包天</item>
+        <item>计时</item>
+    </string-array>
+
+    <string-array name="price_mode">
+        <item>按天付</item>
+        <item>按月付</item>
+        <item>按时付</item>
+    </string-array>
+
+    <string-array name="pay_day_values">
+        <item>1天</item>
+        <item>4天</item>
+        <item>7天</item>
+        <item>10天</item>
+        <item>20天</item>
+    </string-array>
+
+    <string-array name="pay_monthly_values">
+        <item>1月</item>
+        <item>2月</item>
+        <item>4月</item>
+        <item>7月</item>
+        <item>10月</item>
+    </string-array>
+
+    <string-array name="remote_lock_screen_time">
+        <item>永不</item>
+        <item>1分钟</item>
+        <item>2分钟</item>
+        <item>5分钟</item>
+        <item>10分钟</item>
+        <item>30分钟</item>
+        <item>1小时</item>
+    </string-array>
+
+</resources>

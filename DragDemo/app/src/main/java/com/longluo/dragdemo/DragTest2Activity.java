@@ -1,16 +1,21 @@
 package com.longluo.dragdemo;
 
+import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.InputDevice;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
+import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import timber.log.Timber;
 
 public class DragTest2Activity extends AppCompatActivity implements View.OnTouchListener {
 
@@ -18,9 +23,9 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
 
     private View mRootView;
 
-    private SurfaceView mSurfaceView;
+    private SurfaceView mSurfaceViewStream;
 
-    private StreamStatusView mStatusView;
+    private StreamStatusView mStreamStatusView;
 
     private FloatBallView mFloatBallView;
 
@@ -36,6 +41,7 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
         setContentView(R.layout.activity_drag_test2);
 
         initView();
+        initData();
     }
 
     private void initView() {
@@ -44,16 +50,25 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
         mRootView.setOnTouchListener(this);
         mRootView.setClickable(true);
 
-        mSurfaceView = findViewById(R.id.surface_stream);
+        mSurfaceViewStream = findViewById(R.id.surface_stream);
+        mSurfaceViewStream.setZOrderOnTop(false);
 
-        mStatusView = findViewById(R.id.stream_status);
+        mStreamStatusView = findViewById(R.id.stream_status);
 
-        mStatusView.setOnClickListener(new View.OnClickListener() {
+        mStreamStatusView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "StatusView click");
+                Timber.i("StatusView click");
 
                 Toast.makeText(DragTest2Activity.this, "StatusView Click", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        mStreamStatusView.setListener(new StreamStatusView.OnListener() {
+            @Override
+            public void hide() {
+                Timber.i("Close StatusView");
+                mStreamStatusView.setVisibility(View.GONE);
             }
         });
 
@@ -75,7 +90,58 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
             public void onClick(View v) {
                 Log.d(TAG, "FloatBall click");
 
+                if (mStreamStatusView != null && mStreamStatusView.getVisibility() == View.GONE) {
+                    mStreamStatusView.setVisibility(View.VISIBLE);
+                }
+
                 Toast.makeText(DragTest2Activity.this, "FloatBall Click", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private void initData() {
+        mSurfaceViewStream.setZOrderMediaOverlay(true);
+
+        SurfaceHolder holder = mSurfaceViewStream.getHolder();
+
+        holder.addCallback(
+                new SurfaceHolder.Callback() {
+                    @Override
+                    public void surfaceCreated(@NonNull SurfaceHolder surfaceHolder) {
+
+                    }
+
+                    @Override
+                    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+
+                    }
+
+                    @Override
+                    public void surfaceDestroyed(@NonNull SurfaceHolder surfaceHolder) {
+
+                    }
+                }
+        );
+
+        mSurfaceViewStream.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+
+        mSurfaceViewStream.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+            @Override
+            public void onLayoutChange(View v, int left, int top, int right, int bottom,
+                                       int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                int surfaceWidth = mSurfaceViewStream.getWidth();
+                int surfaceHeight = mSurfaceViewStream.getHeight();
+
+                Timber.i("SurfaceView onLayoutChange w = %s, h = %s", surfaceWidth, surfaceHeight);
+            }
+        });
+
+        mSurfaceViewStream.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                Timber.i("mSurfaceView onTouch: x = " + event.getX() + ", y = " + event.getY());
+                return false;
             }
         });
     }
@@ -90,7 +156,7 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        Log.d(TAG, "onTouch: v x = " + v.getX() + ", y = " +  v.getY());
+        Log.d(TAG, "onTouch: v x = " + v.getX() + ", y = " + v.getY());
 
         Log.d(TAG, "onTouch: action =" + event.getAction() + ", btn state = " + event.getButtonState()
                 + ", x = " + event.getX() + ", y = " + event.getY());
@@ -100,7 +166,7 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d(TAG, "onTouchEvent: x = " + event.getX() + ", y = " + event.getY());
+        Timber.d("onTouchEvent: x = %s, y = %s", event.getX(), event.getY());
 
         return super.onTouchEvent(event);
     }
@@ -111,28 +177,36 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
                 + ", btn state = " + event.getButtonState() + ", btn = " + event.getActionButton()
                 + " , x = " + event.getX() + ", y = " + event.getY());
 
-        Log.d(TAG, "is From Mouse = " + event.isFromSource(InputDevice.SOURCE_MOUSE));
+//        Log.d(TAG, "is From Mouse = " + event.isFromSource(InputDevice.SOURCE_MOUSE));
+
+        Log.d(TAG, "Status: x = " + mStreamStatusView.getX() + ", y = " + mStreamStatusView.getY());
+
+        int[] location = new int[2];
+        mStreamStatusView.getLocationOnScreen(location);
+        Log.d(TAG, "Status Location: x = " + location[0] + ", y = " + location[1]);
+
+        Log.d(TAG, "Float: x = " + mFloatBallView.getX() + ", y = " + mFloatBallView.getY());
 
         onMouseEvent(event);
 
-        switch (event.getActionMasked()) {
+        switch (event.getAction()) {
             // 判断两个动作，基本上能保证准确
             case MotionEvent.ACTION_BUTTON_PRESS:
             case MotionEvent.ACTION_DOWN:
                 // 鼠标按键按下
                 judgeButtonPress(event);
-                Log.d(TAG, "鼠标按键按下 消费来自鼠标的事件");
+                Timber.d("鼠标按键按下 消费来自鼠标的事件");
                 return true;
 
             case MotionEvent.ACTION_BUTTON_RELEASE:
             case MotionEvent.ACTION_UP:
                 // 鼠标按键抬起
                 judgeButtonRelease(event);
-                Log.d(TAG, "鼠标按键抬起 消费来自鼠标的事件");
+                Timber.d("鼠标按键抬起 消费来自鼠标的事件");
                 return true;
 
             case MotionEvent.ACTION_SCROLL:
-                Log.d(TAG, "鼠标滚轮按键 消费来自鼠标的事件");
+                Timber.d("鼠标滚轮按键 消费来自鼠标的事件");
                 return true;
 
             default:
@@ -144,14 +218,14 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
-        Log.d(TAG, "dispatchKeyEvent: keyCode = " + event.getKeyCode() + ", action = " + event.getAction());
+        Timber.d("dispatchKeyEvent: keyCode = " + event.getKeyCode() + ", action = " + event.getAction());
 
         return super.dispatchKeyEvent(event);
     }
 
-    @Override
+/*    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        Log.d(TAG, "onKeyDown: keyCode = " + event.getKeyCode() + ", action = " + event.getAction());
+        Timber.d("onKeyDown: keyCode = " + event.getKeyCode() + ", action = " + event.getAction());
 
         // DOWN 和 UP 聚合起来，统一处理
         if (handleKeyEvent(event)) {
@@ -164,7 +238,7 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
 
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
-        Log.d(TAG, "onKeyUp: keyCode = " + event.getKeyCode() + ", action = " + event.getAction());
+        Timber.d("onKeyUp: keyCode = " + event.getKeyCode() + ", action = " + event.getAction());
 
         if (handleKeyEvent(event)) {
             // 被处理了
@@ -172,13 +246,23 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
         }
 
         return super.onKeyUp(keyCode, event);
+    }*/
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        return true;
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return true;
     }
 
     /**
      * true 表示处理事件，false 表示不处理事件
      */
     public boolean handleKeyEvent(KeyEvent keyEvent) {
-        Log.d(TAG, "handleKeyEvent keyCode = " + keyEvent.getKeyCode());
+        Timber.d("handleKeyEvent keyCode = " + keyEvent.getKeyCode());
 
         if (keyEvent.getKeyCode() != KeyEvent.KEYCODE_BACK) {
             return false;
@@ -196,27 +280,27 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
     }
 
     public boolean onButtonPress(KeyEvent keyEvent) {
-        Log.d(TAG, "onButtonPress action = " + keyEvent.getAction() + ", keyCode = " + keyEvent.getKeyCode());
+        Timber.d("onButtonPress action = " + keyEvent.getAction() + ", keyCode = " + keyEvent.getKeyCode());
         return false;
     }
 
     public boolean onButtonRelease(KeyEvent keyEvent) {
-        Log.d(TAG, "onButtonRelease action = " + keyEvent.getAction() + ", keyCode = " + keyEvent.getKeyCode());
+        Timber.d("onButtonRelease action = " + keyEvent.getAction() + ", keyCode = " + keyEvent.getKeyCode());
 
         return false;
     }
 
     public boolean onMouseEvent(MotionEvent event) {
-        Log.d(TAG, "onMouseEvent action = " + event.getAction() + ", btn = "
+        Timber.d("onMouseEvent action = " + event.getAction() + ", btn = "
                 + event.getActionButton() + ", masked = " + event.getActionMasked());
 
         if (!event.isFromSource(InputDevice.SOURCE_MOUSE)) {
             // 事件不来自鼠标
-            Log.d(TAG, "事件源不是鼠标");
+            Timber.d("事件源不是鼠标");
             return false;
         }
 
-        switch (event.getActionMasked()) {
+        switch (event.getAction()) {
             case MotionEvent.ACTION_MOVE:
             case MotionEvent.ACTION_HOVER_MOVE:
                 // 获取指针在屏幕上 X 轴的位置，值的单位是 dp
@@ -224,7 +308,7 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
                 // 获取指针在屏幕上 Y 轴的位置，值的单位是 dp
                 float axisY = event.getAxisValue(MotionEvent.AXIS_Y);
                 // 另一种写法：int x = (int)motionEvent.getRawX(); int y = (int)motionEvent.getRawY();
-                Log.d(TAG, "消费来自鼠标的事件: x = " + axisX + ", y = " + axisY);
+                Timber.d("消费来自鼠标的事件: x = " + axisX + ", y = " + axisY);
                 return true;
 
             case MotionEvent.ACTION_SCROLL:
@@ -233,7 +317,7 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
                 // 获取垂直方向上的滚动距离，值从 -1(向下滚动) 到 1(向上滚动)
                 float vScroll = event.getAxisValue(MotionEvent.AXIS_VSCROLL);
 
-                Log.d(TAG, "消费来自鼠标的事件 hScroll = " + hScroll + ", vScroll = " + vScroll);
+                Timber.d("消费来自鼠标的事件 hScroll = " + hScroll + ", vScroll = " + vScroll);
                 return true;
 
             default:
@@ -244,8 +328,8 @@ public class DragTest2Activity extends AppCompatActivity implements View.OnTouch
     }
 
     public void judgeButtonPress(MotionEvent motionEvent) {
-        Log.d(TAG, "judgeButtonPress: isPrimaryPressed: " + isPrimaryPressed + ", isSecondPressed: " + isSecondPressed
-        + ", isTertiaryPressed: " + isTertiaryPressed);
+        Timber.d("judgeButtonPress: isPrimaryPressed: " + isPrimaryPressed + ", isSecondPressed: " + isSecondPressed
+                + ", isTertiaryPressed: " + isTertiaryPressed);
 
         // 几个键可能同时被按下(概率较低)
         if (isButtonPress(motionEvent, MotionEvent.BUTTON_PRIMARY)) {

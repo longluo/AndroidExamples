@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Trinea Android Demo</string>
+    
+    <string name="imagesdcardcache_demo_activity_title">ImageSDCardCache Demo</string>
+    <string name="httpcache_demo_activity_title">HttpCache Demo</string>
+    <string name="imagecache_demo_activity_title">ImageCache Demo</string>
+    <string name="dropdownlistview_demo_activity_title">Drop Down And Load More ListView Demo</string>
+    <string name="auto_scroll_view_pager_activity_title">Auto Scroll ViewPager Demo</string>
+    <string name="auto_scroll_view_pager_inner_activity_title">Auto Scroll Inner Pager Demo</string>
+    <string name="borderscrollview_demo_activity_title">onBottom onTop ScrollView Demo</string>
+    <string name="search_view_demo_activity_title">SearchView Demo</string>
+    <string name="download_manager_demo_activity_title">DownloadManager Demo</string>
+    <string name="slide_one_page_gallery_demo_activity_title">Slide One Page Gallery Demo</string>
+    <string name="view_pager_demo_activity_title">ViewPager Demo</string>
+    <string name="view_pager_multi_fragment_demo_activity_title">ViewPager Multi Fragment Demo</string>
+    <string name="intent_demo_activity_title">Intent Demo</string>
+    <string name="service_demo_activity_title">Service Demo</string>
+    <string name="broadcastreceiver_demo_activity_title">BroadcastReceiver Demo</string>
+        
+    <string name="send_general_broadcast">send general broadcast</string>
+    <string name="send_local_broadcast">send local broadcast</string>
+    <string name="send_ordered_broadcast">send ordered broadcast</string>
+    <string name="send_sticky_broadcast">send sticky broadcast</string>
+    <string name="general_broadcast_msg">general broadcast say: Voice of America begin</string>
+    <string name="local_broadcast_msg">local broadcast say: Voice of America begin</string>
+    <string name="ordered_broadcast_msg">ordered broadcast say: Voice of America begin</string>
+    <string name="sticky_broadcast_msg">sticky broadcast say: Voice of America begin</string>
+    <string name="sticky_broadcast_wait_tip">Please wait <xliff:g>%1$s</xliff:g> millseconds</string>
+    <string name="ordered_broadcast_high_tip">High priority receiver receive, content is: <xliff:g>%1$s</xliff:g></string>
+    <string name="ordered_broadcast_medium_tip">Medium priority receiver receive, content is: <xliff:g>%1$s</xliff:g>, last receiver is <xliff:g>%2$s</xliff:g></string>
+    <string name="ordered_broadcast_medium_cancel_tip">Medium priority receiver receive and calcel broadcast deliver, content is： <xliff:g>%1$s</xliff:g>, last receiver is <xliff:g>%2$s</xliff:g></string>
+    <string name="ordered_broadcast_low_tip">Low priority receiver receive, content is: <xliff:g>%1$s</xliff:g>, last receiver is <xliff:g>%2$s</xliff:g></string>
+    <string name="ordered_broadcast_tip">Default priority receiver receive, content is:  <xliff:g>%1$s</xliff:g>, last receiver is <xliff:g>%2$s</xliff:g></string>
+ 
+    <string name="start_general_service">start general service</string>
+    <string name="stop_general_service">stop_general service</string>
+    <string name="start_intent_service">start intent service</string>
+    <string name="bound_service">bound service</string>
+    <string name="operate_bound_service">operate_bound service</string>
+    <string name="get_bound_service_pro">get bound service pro</string>
+    <string name="unbound_service">unbound service</string>
+    <string name="start_aidl_service">start aidl service</string>
+    <string name="stop_aidl_service">stop aidl service</string>
+    <string name="operate_value_success">Add value success, current value is:<xliff:g>%1$s</xliff:g></string>
+    <string name="operate_value_tip">Current value is: <xliff:g>%1$s</xliff:g></string>
+    <string name="bind_service_tip">Please bind service first</string>
+       
+    <string name="app_status_download">click to download</string>
+    <string name="app_status_downloaded">downloaded, click to download again</string>
+    <string name="app_status_download_fail">download fail, click to download again</string>
+    <string name="progress_tip">download tip:</string>
+    <string name="download_notification_title">MeiLiShuo</string>
+    <string name="download_begin">begin Download</string>
+    <string name="download_fail">download Fail</string>
+    <string name="app_status_pending">download Peding</string>
+    <string name="app_status_pause">Pause</string>
+    <string name="app_status_downloading">downloading</string>
+    <string name="tip_download_file">file will be saved to sdcard, the path is: </string>
+    
+    <string name="auto_scroll_view_pager_inner">ViewPager in ViewPager Demo</string>
+    
+    <string name="update_at">updated at:&#160;</string>
+    <string name="github">GitHub</string>
+    <string name="github_tip">TrineaAndroidCommon on GitHub</string>
+    
+    <string name="image_content">image</string>
+    <string name="profile">Profile:&#160;</string>
+    <string name="description">Description:&#160;</string>
+    <string name="http_cache_get">Get content</string>
+    
+    <string name="drop_down_tip">Pull down to refresh or scroll to bottom to load more</string>
+    <string name="on_border_tip">Scroll to top or bottom to experience</string>
+        
+    <string name="desc_search_view">SearchView Desc And Implement Search Tip</string>
+    <string name="desc_view_pager_multi_page">Viewpager With Multi Page</string>
+    <string name="desc_download_manager">Download Manager Usage</string>
+    <string name="desc_slide_gallery">Slide One Page Gallery Usage</string>
+    <string name="desc_view_pager">ViewPager And Fragment Usage</string>
+    <string name="desc_service">Android Service Usage</string>
+    <string name="desc_broadcast_receiver">Android BroadcastReceiver Usage</string>
+    <string name="desc_border_scroll_view">BorderScrollView Usage</string>
+    <string name="desc_drop_down_listview">Drop Down And On Bottom Listview</string>
+    <string name="desc_image_cache">ImageCache Usage</string>
+    <string name="desc_image_sdcard_cache">ImageSDCardCache Usage</string>
+    <string name="desc_http_cache">HttpCache Usage</string>
+    <string name="desc_auto_scroll_view_pager_inner">Autoscroll ViewPager in ViewPager Usage</string>
+    <string name="desc_auto_scroll_view_pager">Autoscroll ViewPager Usage</string>
+    <string name="desc_default">Trinea</string>
+</resources>

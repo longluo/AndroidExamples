@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DragLayoutTest</string>
+    <string name="drag">Long-click on the icon and drag it around!</string>
+</resources>

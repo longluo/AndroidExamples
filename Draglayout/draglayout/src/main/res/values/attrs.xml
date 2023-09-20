@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DragLayout" >
+        <attr name="scale" format="reference|float" />
+        <attr name="springTension" format="reference|float" />
+        <attr name="springFriction" format="reference|float" />
+        <attr name="intercepting" format="reference|boolean" />
+    </declare-styleable>
+
+</resources>
