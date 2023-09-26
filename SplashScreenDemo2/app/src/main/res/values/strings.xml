@@ -1,0 +1,8 @@
+<!--
+  ~ Copyright © Marc Auberer 2021. All rights reserved
+  -->
+
+<resources>
+    <string name="app_name">SplashScreenExample</string>
+    <string name="relaunch_app">Relaunch app</string>
+</resources>

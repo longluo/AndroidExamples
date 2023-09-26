@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.2'
+
+    defaultConfig {
+        minSdkVersion 26
+        targetSdkVersion 30
+
+        versionCode 1
+        versionName '1.0'
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        debug {}
+        release {}
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'HardcodedText'
+        disable 'ContentDescription'
+    }
+
+
+
+    signingConfigs {
+        config {
+            storeFile file(StoreFile)
+            storePassword StorePassword
+            keyAlias KeyAlias
+            keyPassword KeyPassword
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled false
+            shrinkResources false
+            minifyEnabled false
+            signingConfig signingConfigs.config
+        }
+
+        release {
+            debuggable false
+            jniDebuggable false
+            zipAlignEnabled true
+            shrinkResources true
+            minifyEnabled true
+
+            signingConfig signingConfigs.config
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/*******'
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pfg.com.screenproc.OpenGLTestActivity">
+
+    <pfg.com.screenproc.MyGLSurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_go_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go screenrecord"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_go_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go videoplayer"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_go_video_dial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go videodialer"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+
+</FrameLayout>

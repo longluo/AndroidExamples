@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.splash">
+
+    <application
+        android:name="com.example.splash.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--        android:theme="@style/SplashThemeWithTitle">-->
+        <activity
+            android:name="com.example.splash.activity.ImageMainActivity"
+            android:theme="@style/AppThemeWithTitle">
+            <!--            <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name="com.example.splash.activity.SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name="com.example.splash.activity.OldMainActivity"
+            android:exported="true"
+            android:label="Main Splash"
+            android:theme="@style/SplashThemeBase.WithBg">
+            <!--            android:theme="@style/SplashThemeBase.DefaultBg"-->
+            <!--            android:theme="@style/SplashThemeBase.NoBg"-->
+            <!--            android:theme="@style/SplashThemeBase.TransparentBg"-->
+            <!--            android:theme="@style/SplashThemeBase.WithBg"-->
+            <!--            android:theme="@style/SplashThemeBase.WithBg.SplashContent"-->
+
+<!--                                    <intent-filter>
+                                        <action android:name="android.intent.action.MAIN" />
+                                        <category android:name="android.intent.category.LAUNCHER" />
+                                    </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name="com.example.splash.activity.CustomizeSplashActivity"
+            android:exported="true"
+            android:label="Fake Splash"
+            android:theme="@style/SplashThemeBase.FakeBg">
+            <!--            android:theme="@style/SplashThemeNoTitleBase.FakeBg"-->
+
+<!--                        <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>-->
+        </activity>
+
+                <activity
+                    android:name="com.example.splash.activity.JetpackSplashActivity"
+                    android:exported="true"
+                    android:label="Jet Splash"
+                    android:theme="@style/SplashScreenTheme">
+                    <!--            android:theme="@style/JetpackSplashTheme"-->
+
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter>
+                </activity>
+
+                <activity android:name="com.example.splash.activity.MainActivity"
+                    android:exported="true"
+                    android:theme="@style/SplashThemeWithTitle">
+        <!--            android:theme="@style/SplashTheme">-->
+<!--                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter>-->
+                </activity>
+    </application>
+</manifest>

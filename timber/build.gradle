@@ -1,0 +1,70 @@
+apply plugin: 'com.github.ben-manes.versions'
+
+buildscript {
+  ext.versions = [
+      'minSdk': 14,
+      'compileSdk': 30,
+
+      'kotlin': '1.5.21',
+      'autoService': '1.0-rc7',
+
+      // Update WrongTimberUsageDetectorTest#innerStringFormatWithStaticImport when >= 7.1.0-alpha07
+      'androidPlugin': '7.0.0',
+      'androidTools': '30.0.0',
+  ]
+
+  ext.deps = [
+      androidPlugin: "com.android.tools.build:gradle:${versions.androidPlugin}",
+      'kotlin': [
+          'plugin': "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}",
+          'stdlib': "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+      ],
+      'lint': [
+          'core': "com.android.tools.lint:lint:${versions.androidTools}",
+          'api': "com.android.tools.lint:lint-api:${versions.androidTools}",
+          'checks': "com.android.tools.lint:lint-checks:${versions.androidTools}",
+          'tests': "com.android.tools.lint:lint-tests:${versions.androidTools}",
+      ],
+      'auto': [
+          'service': "com.google.auto.service:auto-service:${versions.autoService}",
+          'serviceAnnotations': "com.google.auto.service:auto-service-annotations:${versions.autoService}",
+      ],
+      annotations: 'org.jetbrains:annotations:20.1.0',
+
+      junit: 'junit:junit:4.13.2',
+      truth: 'com.google.truth:truth:1.1.2',
+      robolectric: 'org.robolectric:robolectric:4.6.1',
+  ]
+
+  repositories {
+    mavenCentral()
+    google()
+    gradlePluginPortal()
+  }
+
+  dependencies {
+    classpath deps.androidPlugin
+    classpath deps.kotlin.plugin
+    classpath 'com.github.ben-manes:gradle-versions-plugin:0.39.0'
+    classpath 'me.champeau.gradle:japicmp-gradle-plugin:0.2.9'
+    classpath 'com.vanniktech:gradle-maven-publish-plugin:0.14.2'
+    classpath 'org.jetbrains.dokka:dokka-gradle-plugin:1.4.32'
+  }
+}
+
+subprojects {
+  repositories {
+    mavenCentral()
+    google()
+  }
+
+  tasks.withType(Test) {
+    testLogging {
+      events "failed"
+      exceptionFormat "full"
+      showExceptions true
+      showStackTraces true
+      showCauses true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  录制进度条样式  -->
+    <declare-styleable name="RecordProgressView">
+        <attr name="radius" format="dimension|reference" />
+        <attr name="bg_color" format="color|reference" />
+        <attr name="content_color" format="color|reference" />
+        <attr name="divider_color" format="color|reference" />
+        <attr name="divider_width" format="dimension|reference" />
+    </declare-styleable>
+
+    <!--  录制按钮样式  -->
+    <declare-styleable name="RecordButton">
+        <attr name="circleStrokeWidthMin" format="dimension|reference"/>
+        <attr name="circleStrokeWidthMax" format="dimension|reference"/>
+        <attr name="strokeColor" format="color|reference"/>
+        <attr name="circleColor" format="color|reference"/>
+        <attr name="rectCorner" format="dimension|reference"/>
+        <attr name="rectWidthMax" format="dimension|reference"/>
+        <attr name="rectWidthMin" format="dimension|reference"/>
+    </declare-styleable>
+
+</resources>

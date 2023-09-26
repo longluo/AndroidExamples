@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    tools:context=".ActivityHome">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingBottom="20dp"
+            android:src="@drawable/ic_house"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="It's good to be at home :)"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="200dp"
+            android:id="@+id/btClickMe"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Click Me!" />
+
+    </LinearLayout>
+
+</RelativeLayout>

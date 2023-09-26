@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'com.vanniktech.maven.publish'
+apply plugin: 'org.jetbrains.dokka' // Must be applied here for publish plugin.
+
+android {
+  compileSdkVersion versions.compileSdk
+
+  defaultConfig {
+    minSdkVersion versions.minSdk
+    consumerProguardFiles 'consumer-proguard-rules.pro'
+  }
+
+  lintOptions {
+    textReport true
+    textOutput 'stdout'
+  }
+}
+
+dependencies {
+  api deps.kotlin.stdlib
+  implementation deps.annotations
+
+  testImplementation deps.annotations
+  testImplementation deps.junit
+  testImplementation deps.truth
+  testImplementation deps.robolectric
+
+  lintPublish project(':timber-lint')
+}

@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+	compileSdkVersion versionCompiler
+	buildToolsVersion versionBuildTool
+
+	compileOptions {
+		sourceCompatibility javaSourceCompatibility
+		targetCompatibility javaTargetCompatibility
+	}
+
+    defaultConfig {
+        applicationId "com.serenegiant.audiovideosample"
+        minSdkVersion 18
+		targetSdkVersion versionTarget
+		versionCode versionCodeNum
+		versionName versionNameString
+
+		testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+		consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+	testImplementation 'junit:junit:4.12'
+	androidTestImplementation 'androidx.test:runner:1.2.0'
+	androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+	implementation "androidx.appcompat:appcompat:${androidXVersion}"
+	implementation "androidx.legacy:legacy-support-v4:${androidXLegacyV4}"
+
+	implementation "com.serenegiant:common:${commonLibVersion}"
+}

@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="ThemeApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ThemeSplash" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimarySplash</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkSplash</item>
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+</resources>

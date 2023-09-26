@@ -1,0 +1,8 @@
+<!--
+  ~ Copyright © Marc Auberer 2021. All rights reserved
+  -->
+
+<resources>
+    <string name="app_name">SplashScreen</string>
+    <string name="powered_by">powered by ChilliBits</string>
+</resources>

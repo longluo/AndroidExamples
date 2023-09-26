@@ -1,0 +1,69 @@
+buildscript {
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.4'
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+// Manifest version information
+def versionMajor = 0
+def versionMinor = 1
+def versionPatch = 0
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.0"
+
+    defaultConfig {
+        applicationId "com.sureshjoshi.android.streamingprotobufexample"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+    }
+
+    buildTypes {
+
+        debug {
+            applicationIdSuffix '.debug'
+            resValue "string", "app_name", "Streaming Protobuf Example Debug"
+            debuggable true
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            resValue "string", "app_name", "Streaming Protobuf Example"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    
+    compile 'com.android.support:appcompat-v7:28.0.0'
+
+    compile 'com.squareup.wire:wire-runtime:2.1.1'
+
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.jakewharton.timber:timber:3.1.0'
+
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.3'
+}

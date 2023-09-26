@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MediaCodeDemo</string>
+    <string name="audio_decode">audio decoded</string>
+    <string name="video_decode">video decoded</string>
+    <string name="video_encode">video encode</string>
+    <string name="label_play_aac">Play aac</string>
+    <string name="btn_next">下一步</string>
+</resources>

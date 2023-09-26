@@ -1,0 +1,5 @@
+<resources>
+    <string name="add_one">Add One</string>
+    <string name="add_ten">Add ten</string>
+    <string name="Refresh">Refresh</string>
+</resources>

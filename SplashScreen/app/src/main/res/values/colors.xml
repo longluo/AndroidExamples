@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Edit your theme color here -->
+    <color name="colorPrimary">#D81B60</color>
+    <color name="colorPrimaryDark">#BB1658</color>
+    <color name="colorAccent">#304FFE</color>
+
+    <color name="colorPrimarySplash">#00C853</color>
+    <color name="colorPrimaryDarkSplash">#00993F</color>
+    <color name="colorAccentSplash">#E65100</color>
+
+</resources>

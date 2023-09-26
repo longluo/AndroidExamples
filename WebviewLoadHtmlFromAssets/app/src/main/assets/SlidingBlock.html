@@ -1,0 +1,172 @@
+<!DOCTYPE>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+
+		<script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/sd/nch5/index.js?t=2015052012"></script>
+		<!--
+    <!— 若您的主要用户来源于海外，请替换使用下面的js资源 —>
+    <!— <script type="text/javascript" charset="utf-8" src="//aeis.alicdn.com/sd/nch5/index.js?t=2015052012"></script> —> -->
+	</head>
+
+	<style type="text/css">
+		/* 滑动条高度、边框、背景色等 */
+		#__nc{
+			background-color: transparent !important;
+		}
+		body,html{
+			padding: 0;
+			margin: 0;
+		}
+		._nc .stage1 .slider {
+			height: 30px;
+			border-radius: 24px;
+			background-color: #1B1527;
+			overflow: hidden;
+			box-shadow: none;
+			left: 2px;
+			right: 2px;
+		}
+		/* 滑动条 */
+		
+		._nc .stage1 .track div {
+			border-radius: 4px;
+			color: #fff;
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+		}
+		/* 滑动条背景色-正常 */
+		
+		._nc .stage1 .bg-green {
+			background: linear-gradient(270deg, #542f9e, #1B1527 100%);
+			height: 30px;
+		}
+		/* 滑动条背景色-失败 */
+		
+		._nc .stage1 .bg-red {
+			background-color: #ff5500;
+		}
+		
+		._nc .stage1 .button {
+			width: 30px;
+			height: 30px;
+			background: linear-gradient(180deg, #6835cb, rgba(31, 28, 59, 0.79) 100%);
+			border-radius: 14px;
+			box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.30);
+		}
+		._nc .stage1{
+			height: 34px;
+			margin: 0px;
+			position: static;
+			padding: 2px;
+			background-color: #1B1527;
+			box-sizing: border-box;
+			border-radius: 16px;
+			overflow: hidden;
+		}
+		._nc .stage1 .label {
+			line-height: 30px;
+			height: 30px;
+			font-size: 12px;
+		}
+		
+		._nc .icon-slide-arrow:before,
+		._nc .icon-ok:before {
+			display: none;
+		}
+		._nc .icon{
+			width: 30px;
+			height: 30px;
+			left: 0 !important;
+		}
+		._nc .icon-slide-arrow {
+			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAASVJREFUWEft1T1KQ1EQhuF3lJT+FO4ihWkUxcIihZWaPsvIBlyAYGX2oFaCiK7FpUT45MBRJIWce2cuBJzUZ+59eM8kMTb8YxvuI4HeG8qCWdBbwDufO5gFvQW88/9nByUdAEtgB3gxs3tvvTIfWlDSKfBWkQszu/MiQ4EFI+mkIncBNzIcWJHHwDuw50UOAqzIo4rc9yA7AyWdA5eNuzUBpuXm+yL7ABfAbSPw97EVMDazjy6zfYCHwFnjSy6AK+ATmJvZY+Pcz7HOwNYXSCpr8ARs98WF/w5+4yWVagW35cENApR0DZSrdOPCgZJmwEMULhRY/4tvgBHwambPrfv617nBviQRuNCCUaD152RBb9ksmAW9BbzzuYNZ0FvAO5876C34BV3KRCmgykPWAAAAAElFTkSuQmCC') no-repeat center center/40px;
+			
+		}
+		
+		._nc .icon-ok {
+			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAS1JREFUWEftlTFKBEEQRd/PxMgL6AlMFTGR9QKCJxEvIHgBES8hmJpoaOIRNjAyUzxEycAsNMs0O1PVqxNUp901/Xi/q0bMfGnmfCRgNKE0mAajBqL1+QbTYNRAtD7f4Mqgme0Cj8ApcCnpbYzdPzHYwz0Dix7qVtLNLAAH4JbAmaSffweswC0kfY+B685MitjMdoB9SR+bLmgB5wF8B06AO0nXNchWcB7AT+CgB7uXdLUOWYE7l/S1yfrQ/tSIj4BXYG8IsjXcZINdgZkNQm4DzgVYgXwADos5140Sd6xl1JMiLgvN7Bh4KeJebTeDcxssfl/rkE3hwoB93B3kE9B16YW3W2sd7o7YMzI8NQnosdaki6MXj63PiMeayi6OmkqDaXBbBqLfzTkYNfgL5IplKbD7Vu8AAAAASUVORK5CYII=') no-repeat center center/40px !important;
+		}
+		._nc .icon-load-c::before{
+			content: '';
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAbpJREFUOE+tk81LAlEQwPft200R0pO7IQStBEWXLh4C6SQKXrp1KfTYzSAI9eg/EGjQuUNCYBSFuGAReEgoOnYIUcyjYIhuu+vb3fd2w8ho+zCi5vbm4zczb2YA9UcBf4ynPgEIIRsAgBQAYAEAoL0mAKFQiEMIqdVq9el9UhsAIbQNIUzRNJ2BEO69dwwGg5Nut5sbDAb9SqXyOLK9AWRZXoQQlmia3nQ4HCdftRaNRt2WZc2wLNsoFovq0OcNIEnSDsMwUy6Xa33cv0QikXkAAC6Xyw0boN/vn1MUte/xeA7HAcLhsI9l2WlRFG9sgG63e00ISXu93soPFXAMwyyKonhhA3Q6nVPTNA94nj8eB4jFYoJlWbP5fN4OaLfbadM0eZ/PtzUOkEwmQ5qmSblc7tZWQavVEiCEu4Zh7Pr9/hf6R8lms3OyLC9hjM8ymUzPBhg+ms3mCiFkDWN85HQ6S4IgoKG+UChMEEICw1EjhK4SicTdpz0YKWq12rKmaauGYQBd1x8URdEQQh5VVSWE0GU8Hr//dhNHhnq97uj1egu6rnsxxlhRlDbHcfVAIGB8bOv/j+m31/kMQ5/AERw2cDkAAAAASUVORK5CYII=') no-repeat center / 24px;
+		}
+	</style>
+
+	<body>
+
+		<div id="__nc" style="margin-left:auto;margin-right:auto;width:100%;margin-top:auto;margin-bottom:auto;height:100%;">
+			<div id="nc">
+			</div>
+		</div>
+
+		<script>
+			window.androidObj = function AndroidClass() {};
+
+			var nc_token = ['FFFF0N000000000094CD', (new Date()).getTime(), Math.random()].join(':');
+			console.log(nc_token)
+
+			var nc = NoCaptcha.init({
+				renderTo: '#nc',
+				appkey: 'FFFF0N000000000094CD',
+				scene: 'nc_register_h5',
+				token: nc_token,
+				trans: {
+					'key1': 'code200'
+				},
+				elementID: ['usernameID'],
+				is_Opt: 0,
+				language: 'cn',
+				timeout: 10000,
+				retryTimes: 5,
+				errorTimes: 5,
+				inline: false,
+
+				apimap: {
+					// 'analyze': '//a.com/nocaptcha/analyze.jsonp',
+					// 'uab_Url': '//aeu.alicdn.com/js/uac/909.js',
+				},
+
+				bannerHidden: false,
+				initHidden: false,
+
+				callback: function(data) {
+					alert(data)
+					let result = {
+						'nc_token': nc_token,
+						'sessionid': data.csessionid,
+						'sig': data.sig
+					};
+
+					console.log("Callback: " + JSON.stringify(result));
+
+					window.androidObj.tokenToAndroid(JSON.stringify(result));
+				},
+
+				error: function(s) {}
+			});
+
+			NoCaptcha.setEnabled(true);
+			nc.reset(); //请务必确保这里调用一次reset()方法
+
+			NoCaptcha.upLang('cn', {
+				'LOADING': '加载中…', //加载
+				'SLIDER_LABEL': '请按住滑块拖动到最右边', //等待滑动
+				'CHECK_Y': '验证通过', //通过
+				'ERROR_TITLE': '非常抱歉，这出错了…', //拦截
+				'CHECK_N': '验证未通过', //准备唤醒二次验证
+				'OVERLAY_INFORM': '经检测你当前操作环境存在风险，请输入验证码', //二次验证
+				'TIPS_TITLE': '验证码错误，请重新输入' //验证码输错时的提示
+			});
+		</script>
+
+	</body>
+
+</html>

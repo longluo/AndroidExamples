@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简单播放器"
+            android:onClick="clickSimplePlayer"
+    />
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OpenGL 渲染简单三角形"
+            android:onClick="clickSimpleTriangle"
+    />
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OpenGL 渲染简单纹理贴图"
+            android:onClick="clickSimpleTexture"
+    />
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OpenGL 渲染视频"
+            android:onClick="clickOpenGLPlayer"
+    />
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OpenGL 渲染多视频"
+            android:onClick="clickMultiOpenGLPlayer"
+    />
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EGL 渲染视频"
+            android:onClick="clickEGLPlayer"
+    />
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="使用FBO实现 灵魂出窍效果"
+            android:onClick="clickSoulPlayer"
+    />
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="视频硬编码"
+            android:onClick="clickEncoder"
+    />
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FFmpeg信息打印/视频播放"
+            android:onClick="clickFFmpegInfo"
+    />
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FFmpeg + OpenGL 视频播放"
+            android:onClick="clickFFmpegGLPlayer"
+    />
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FFmpeg 重打包"
+            android:onClick="clickFFmpegRepack"
+    />
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FFmpeg 编码"
+            android:onClick="clickFFmpegEncode"
+            />
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        mavenLocal()
+
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/grails-core/' }
+        maven { url 'https://maven.aliyun.com/repository/apache-snapshots/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+
+        google()
+
+        maven { url "https://maven.google.com" }
+
+        maven { url "https://jitpack.io" }
+
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+
+    repositories {
+        mavenLocal()
+
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/grails-core/' }
+        maven { url 'https://maven.aliyun.com/repository/apache-snapshots/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+
+        google()
+
+        maven { url "https://maven.google.com" }
+
+        maven { url "https://jitpack.io" }
+
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

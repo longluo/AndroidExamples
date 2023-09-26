@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:background="@color/black"
+    android:layout_height="match_parent"
+    >
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+
+		<!-- 录制预览 -->
+		<com.myl.mediacodedemo.encode.demo.GLRecordView
+			android:id="@+id/gl_record_view"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			app:layout_constraintDimensionRatio="9:16"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="parent"/>
+
+		<!-- 录制进度条 -->
+		<com.myl.mediacodedemo.ui.RecordProgressView
+			android:id="@+id/record_progress_view"
+			android:layout_width="match_parent"
+			android:layout_height="@dimen/dp6"
+			android:layout_marginStart="@dimen/dp6"
+			android:layout_marginEnd="@dimen/dp6"
+			android:layout_marginTop="@dimen/dp6"
+			app:radius="@dimen/dp4"
+			app:divider_width="@dimen/dp1"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent"/>
+
+
+		<!-- 录制按钮 -->
+		<com.myl.mediacodedemo.ui.RecordButton
+			android:id="@+id/btn_record"
+			android:layout_width="120dp"
+			android:layout_height="120dp"
+			android:layout_gravity="bottom|center_horizontal"
+			app:circleColor="@color/record_red"
+			app:strokeColor="@color/record_stroke_red"
+			app:circleStrokeWidthMin="@dimen/dp6"
+			app:circleStrokeWidthMax="@dimen/dp12"
+			app:rectCorner="@dimen/dp5"
+			app:rectWidthMin="@dimen/dp30"
+			app:rectWidthMax="@dimen/dp55"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintBottom_toBottomOf="parent"/>
+
+		<!-- 下一步 -->
+		<Button
+			android:id="@+id/btn_next"
+			android:layout_width="@dimen/dp85"
+			android:layout_height="@dimen/dp45"
+			android:textSize="13sp"
+			android:background="@drawable/bg_record_next_button"
+			android:text="@string/btn_next"
+			android:textColor="@color/white"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintLeft_toRightOf="@+id/btn_record"
+			app:layout_constraintBottom_toBottomOf="@+id/btn_record"
+			app:layout_constraintTop_toTopOf="@+id/btn_record"/>
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</LinearLayout>
