@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.longluo.gldemo.livepush.mcamera.widget.MyCameraView
+        android:id="@+id/_mysurface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.longluo.gldemo.livepush.camera.widget.CameraFocusView
+        android:id="@+id/camera_focus_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:stroke_width="5dp" />
+
+    <com.longluo.gldemo.livepush.camera.widget.RecordProgressButton
+        android:id="@+id/record"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="recordVideo"
+        android:text="录制"
+        android:visibility="gone" />
+
+</RelativeLayout>

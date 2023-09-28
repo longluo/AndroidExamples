@@ -1,0 +1,6 @@
+# Binaries
+bin/
+build/
+
+# Gradle
+.gradle

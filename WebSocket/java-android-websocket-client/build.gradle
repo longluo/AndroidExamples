@@ -1,0 +1,65 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+def pomConfig = {
+    licenses {
+        license {
+            name "The Apache Software License, Version 2.0"
+            url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+    }
+    developers {
+        developer {
+            name "Gustavo Avila"
+            email "gusavila92@gmail.com"
+        }
+    }
+    scm {
+    	connection "scm:git:git://github.com/gusavila92/java-android-websocket-client.git"
+    	developerConnection "scm:git:ssh://github.com:gusavila92/java-android-websocket-client.git"
+    	url "http://github.com/gusavila92/java-android-websocket-client/tree/master"
+    }
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            groupId 'dev.gustavoavila'
+            artifactId 'java-android-websocket-client'
+            version '2.0.2'
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('name', 'Java/Android WebSocket Client')
+                root.appendNode('description', 'A very lightweight WebSocket client library for Java/Android which aims to implement the WebSocket protocol as defined in RFC 6455')
+                root.appendNode('url', 'https://github.com/gusavila92/java-android-websocket-client')
+                root.children().last() + pomConfig
+            }
+        }
+    }
+    repositories {
+        maven {
+            url "https://s01.oss.sonatype.org/content/repositories/releases/"
+            credentials {
+                username = "gusavila92"
+                password = "$System.env.SONATYPE_PASSWORD"
+            }
+        }
+    }
+}

@@ -54,6 +54,7 @@ public class CameraHandler extends Handler {
             case MSG_SET_SURFACE_TEXTURE:
                 activity.handleSetSurfaceTexture((SurfaceTexture) inputMessage.obj);
                 break;
+
             default:
                 throw new RuntimeException("unknown msg " + what);
         }

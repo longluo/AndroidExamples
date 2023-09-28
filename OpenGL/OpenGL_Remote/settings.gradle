@@ -1,0 +1,3 @@
+rootProject.name = "OpenGL_Remote"
+include ':app'
+

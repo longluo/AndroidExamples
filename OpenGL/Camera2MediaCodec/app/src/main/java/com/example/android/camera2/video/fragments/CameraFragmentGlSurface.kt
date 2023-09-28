@@ -52,7 +52,6 @@ import kotlin.coroutines.suspendCoroutine
 
 class CameraFragmentGlSurface : Fragment() {
 
-
     /** AndroidX navigation arguments */
     private val args: CameraFragmentImageReaderArgs by navArgs()
 

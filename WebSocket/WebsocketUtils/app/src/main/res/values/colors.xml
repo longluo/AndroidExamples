@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_night">#FF666699</color>
+    <color name="primary_day">#FF0099FF</color>
+    <color name="primary_variant">#FF336699</color>
+    <color name="secondary_night">#FF336666</color>
+    <color name="secondary_day">#FF669999</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#FF757575</color>
+</resources>

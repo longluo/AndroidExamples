@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.longluo.gldemo.livepush.mcamera.widget.MyCameraView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--    <com.darren.livepush.camera.widget.CameraFocusView-->
+    <!--        android:id="@+id/camera_focus_view"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        app:stroke_width="5dp" />-->
+
+    <!--    <com.darren.livepush.camera.widget.RecordProgressButton-->
+    <!--        android:id="@+id/record_button"-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="150dp"-->
+    <!--        android:layout_marginBottom="40dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true" />-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:onClick="recordVideo"-->
+    <!--        android:text="录制"-->
+    <!--        android:visibility="gone" />-->
+</RelativeLayout>

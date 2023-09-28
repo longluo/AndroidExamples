@@ -9,6 +9,7 @@
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
+
     <!--
     We don't use these uses-features to run this sample on the devices like Nexus7(2012)
     that have only in-camera without autofocus. 

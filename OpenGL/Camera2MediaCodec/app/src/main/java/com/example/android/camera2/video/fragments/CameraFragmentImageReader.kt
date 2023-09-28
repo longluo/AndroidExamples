@@ -272,7 +272,6 @@ class CameraFragmentImageReader : Fragment() {
         }, handler)
     }
 
-
     override fun onPause() {
         super.onPause()
         encoder.stopEncoding()
