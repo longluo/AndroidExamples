@@ -43,8 +43,8 @@ public class GlUtil {
 
     private static final int SIZEOF_FLOAT = 4;
 
-
     private GlUtil() {
+
     }     // do not instantiate
 
     /**
@@ -80,6 +80,7 @@ public class GlUtil {
             GLES20.glDeleteProgram(program);
             program = 0;
         }
+        
         return program;
     }
 

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SampleOpenGLPlayer</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_play">Play</string>
+    <string name="action_screenshot">Screenshot</string>
+</resources>

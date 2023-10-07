@@ -79,12 +79,15 @@ class VideoDecoder : MediaDecoder() {
                     MediaCodec.INFO_OUTPUT_FORMAT_CHANGED -> {
                         Log.d(TAG, "INFO_OUTPUT_FORMAT_CHANGED format : " + decoder.outputFormat)
                     }
+
                     MediaCodec.INFO_TRY_AGAIN_LATER -> {
                         Log.d(TAG, "INFO_TRY_AGAIN_LATER")
                     }
+
                     MediaCodec.INFO_OUTPUT_BUFFERS_CHANGED -> {
                         Log.d(TAG, "INFO_OUTPUT_BUFFERS_CHANGED")
                     }
+
                     else -> {
                         if (isFirst.not()) {
                             startWhen = System.currentTimeMillis()
@@ -93,14 +96,15 @@ class VideoDecoder : MediaDecoder() {
                         try {
                             val sleepTime: Long =
                                 newBufferInfo.presentationTimeUs / 1000 - (System.currentTimeMillis() - startWhen)
+
                             Log.d(
                                 TAG,
                                 "info.presentationTimeUs : " + (newBufferInfo.presentationTimeUs / 1000).toString() + " playTime: " + (System.currentTimeMillis() - startWhen).toString() + " sleepTime : " + sleepTime
                             )
+
                             if (sleepTime > 0) sleep(sleepTime)
 
                         } catch (e: InterruptedException) {
-                            // TODO Auto-generated catch block
                             e.printStackTrace()
                         }
 
