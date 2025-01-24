@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdk 33
+
+    namespace 'me.longluo.audioinput'
+
+    defaultConfig {
+        minSdk 8
+        targetSdk 33
+        versionCode 3
+        versionName "1.1.0"
+
+        buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
+        buildConfigField "String", "VERSION_NAME", "\"1.1.0\""
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    dependencies {
+    }
+}

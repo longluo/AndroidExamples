@@ -1,0 +1,1 @@
+App for testing the audio output. Press a button to play sine wave on LEFT / RIGHT / BOTH channels.

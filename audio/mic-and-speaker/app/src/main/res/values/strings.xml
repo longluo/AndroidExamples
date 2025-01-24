@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Audio Test</string>
+    <string name="about">about</string>
+    <string name="settings">settings</string>
+    <string name="app_developed_by">App. developed by:</string>
+    <string name="dev_website">https://hardcodedjoy.com</string>
+    <string name="dev_instagram_page">\@hardcodedjoy</string>
+    <string name="dev_youtube_handle">\@hardcoded_joy</string>
+    <string name="dev_github_page">hardcodedjoy</string>
+    <string name="theme">Theme</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="system">System</string>
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="sample_rate">Sample Rate</string>
+    <string name="left">LEFT</string>
+    <string name="right">RIGHT</string>
+    <string name="both">BOTH</string>
+    <string name="app_uses">App uses open-source libraries:</string>
+</resources>
