@@ -1,0 +1,39 @@
+complexity:
+  TooManyFunctions:
+    excludes: [ '**/util/system/lang/**' ]
+  LongParameterList:
+    active: true
+    functionThreshold: 10
+    constructorThreshold: 10
+  ComplexMethod:
+    threshold: 20
+formatting:
+  Indentation:
+    active: false
+  ParameterListWrapping:
+    active: false
+  ImportOrdering:
+    active: false
+  MaximumLineLength:
+    excludes: [ "**/test/**/* ,**/util/system/lang/**" ]
+style:
+  MaxLineLength:
+    excludes: [ '**/test/**/*' ,'**/util/system/lang/**' ]
+    active: true
+    maxLineLength: 145
+  MagicNumber:
+    active: false
+    excludes: [ '**/test/**/*' ]
+  NewLineAtEndOfFile:
+    active: false
+naming:
+  ConstructorParameterNaming:
+    active: false
+  VariableNaming:
+    active: false
+performance:
+  SpreadOperator:
+    active: false
+exceptions:
+  TooGenericExceptionCaught:
+    active: false

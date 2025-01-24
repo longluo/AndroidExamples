@@ -1,0 +1,19 @@
+<resources>
+    <dimen name="base_padding">10dp</dimen>
+    <dimen name="base_padding_small">5dp</dimen>
+    <dimen name="base_padding_large">25dp</dimen>
+    <dimen name="item_img_max_height">70dp</dimen>
+    <dimen name="item_padding">4dp</dimen>
+    <dimen name="toolbar_corner_radius">14dp</dimen>
+    <dimen name="chat_edit_text">21sp</dimen>
+    <dimen name="toolbar_img_height">50dp</dimen>
+    <dimen name="toolbar_text">23sp</dimen>
+    <dimen name="text_small">10sp</dimen>
+    <dimen name="text_large">26sp</dimen>
+    <dimen name="text_not_that_large">22sp</dimen>
+    <dimen name="text_medium">17sp</dimen>
+    <dimen name="bottom_nav_height">57dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="image_max_width">250dp</dimen>
+    <dimen name="image_max_width_large">350dp</dimen>
+</resources>

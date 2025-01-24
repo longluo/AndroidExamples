@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="robin_egg_blue">#12C4C2</color>
+    <color name="iris_blue">#10ACC9</color>
+    <color name="persian_green">#049C9B</color>
+    <color name="light_green">#00ccc1</color>
+    <color name="lighter_green">#b8efe8</color>
+    <color name="wild_sand">#E9E5DC</color>
+    <color name="seashell">#FBFAF9</color>
+    <color name="regent_grey">#7C8D95</color>
+    <color name="accent_yellow">#FDD835</color>
+    <color name="accent_purple">#c900a1</color>
+    <color name="tealish">#22b7af</color>
+    <color name="very_light_white">#33FFFFFF</color>
+    <color name="dark_blue_green">#007D90</color>
+    <color name="light_black_text">#2f332f</color>
+    <color name="insync_white">#fbfbfb</color>
+    <color name="insync_offwhite">#fcfcfc</color>
+    <color name="subheader">#8a000000</color>
+    <color name="body">#8b000000</color>
+    <color name="hint">#9b9b9b</color>
+    <color name="dark_grey">#787a7d</color>
+    <color name="dateTimeHeader">#4a4a4a</color>
+    <color name="lightTeal">#d2ffff</color>
+
+
+    <!--    Theme Colors    -->
+    <color name="something_yellow">#F17A0A</color>
+
+    <color name="something_green">#00A389</color>
+    <color name="something_green_light">#00D6B4</color>
+    <color name="something_green_dark">#007F6B</color>
+    <color name="something_green_ripple">#3300A389</color>
+
+    <color name="something_purple">#3800A3</color>
+    <color name="something_purple_light">#4A00D6</color>
+    <color name="something_purple_ripple">#4D3800A3</color>
+
+    <color name="dark_foreground">#1E1D2A</color>
+    <color name="dark_background">#15141D</color>
+
+    <color name="light_foreground">#ffffff</color>
+    <color name="light_background">#F3F3F3</color>
+</resources>
