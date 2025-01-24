@@ -1,0 +1,3 @@
+rootProject.name = "libjpeg-turbo Android Library Sample App"
+include ':app'
+include ':libjpeg-turbo'
