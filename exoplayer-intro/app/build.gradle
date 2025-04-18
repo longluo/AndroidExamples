@@ -1,0 +1,44 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.exoplayercodelab"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+		
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+		
+        multiDexEnabled true
+    }
+
+	compileOptions {
+		sourceCompatibility 1.8
+		targetCompatibility 1.8
+	}
+	buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'com.example.exoplayercodelab'
+}
+
+dependencies {
+    // Switch out the code lab step to jump to different points in the codelab
+
+//    implementation project(':exoplayer-codelab-00')
+//    implementation project(':exoplayer-codelab-01')
+//    implementation project(':exoplayer-codelab-02')
+//    implementation project(':exoplayer-codelab-03')
+    implementation project(':exoplayer-codelab-04')
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+}
