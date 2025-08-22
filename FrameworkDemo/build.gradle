@@ -1,0 +1,69 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/grails-core/' }
+        maven { url 'https://maven.aliyun.com/repository/apache-snapshots/' }
+
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.4.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/grails-core/' }
+        maven { url 'https://maven.aliyun.com/repository/apache-snapshots/' }
+
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+
+        maven { url 'https://jitpack.io' }
+    }
+
+    beforeEvaluate { project ->
+        // framework.jar 路径
+        def path = rootDir.absolutePath + "/app/libs/framework.jar"
+
+        project.tasks.withType(JavaCompile) { task ->
+            // 低版本 Gradle 的方案
+            task.options.compilerArgs << "-Xbootclasspath/p:$path"
+
+            // 高版本 Gradle 的方案
+            def newFileList = []
+            newFileList << file(path)
+
+            if (task.options.bootstrapClasspath != null) {
+                newFileList.addAll(task.options.bootstrapClasspath.files)
+            }
+
+            task.options.bootstrapClasspath = files(newFileList)
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+

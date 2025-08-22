@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android Demo</string>
+
+    <string name="has_used">Has Used</string>
+</resources>

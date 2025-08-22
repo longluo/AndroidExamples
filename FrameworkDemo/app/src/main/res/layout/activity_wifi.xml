@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_wifi_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Wifi: On"
+            android:textColor="@color/colorRed"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tv_wifi_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Wifi Info"
+            android:textColor="@color/colorRed"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_wifi_on"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Wifi On" />
+
+        <Button
+            android:id="@+id/btn_wifi_off"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Wifi Off" />
+
+        <TextView
+            android:id="@+id/tv_wifi_ap_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Wifi AP Info"
+            android:textColor="@color/colorRed"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btn_wifi_ap_on"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Wifi AP On" />
+
+        <Button
+            android:id="@+id/btn_wifi_ap_off"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Wifi AP Off" />
+
+        <TextView
+            android:id="@+id/tv_wifi_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wifi List: "
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
