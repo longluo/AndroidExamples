@@ -154,7 +154,7 @@ preBuild.doLast {
 
     // 修改 .iml 文件
     println "> Task :${project.name}:preBuild:doLast:changedSdkOrder"
-    changeSdkOrder(rootDir.absolutePath + "/.idea/modules/app/FrameworkDemo.app.main.iml")
+    changeSdkOrder(rootDir.absolutePath + "/.idea/modules/${model.name}/${project.getParent().name}.${model.name}.main.iml")
 }
 
 
