@@ -1,14 +1,14 @@
 package ai.onnxruntime.example.objectdetection
 
 import ai.onnxruntime.OnnxJavaType
-import ai.onnxruntime.OrtSession
 import ai.onnxruntime.OnnxTensor
 import ai.onnxruntime.OrtEnvironment
+import ai.onnxruntime.OrtSession
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import java.io.InputStream
 import java.nio.ByteBuffer
-import java.util.*
+import java.util.Collections
 
 internal data class Result(
     var outputBitmap: Bitmap,
@@ -33,8 +33,9 @@ internal class ObjectDetector(
         )
         inputTensor.use {
             // Step 3: call ort inferenceSession run
-            val output = ortSession.run(Collections.singletonMap("image", inputTensor),
-                setOf("image_out","scaled_box_out_next")
+            val output = ortSession.run(
+                Collections.singletonMap("image", inputTensor),
+                setOf("image_out", "scaled_box_out_next")
             )
 
             // Step 4: output analysis
@@ -44,7 +45,7 @@ internal class ObjectDetector(
                 val outputImageBitmap = byteArrayToBitmap(rawOutput)
 
                 // Step 5: set output result
-                var result = Result(outputImageBitmap,boxOutput)
+                var result = Result(outputImageBitmap, boxOutput)
                 return result
             }
         }

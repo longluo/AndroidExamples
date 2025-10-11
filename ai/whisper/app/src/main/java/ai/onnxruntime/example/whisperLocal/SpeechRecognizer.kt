@@ -6,6 +6,7 @@ import ai.onnxruntime.OrtSession
 import ai.onnxruntime.extensions.OrtxPackage
 import android.os.SystemClock
 
+
 class SpeechRecognizer(modelBytes: ByteArray) : AutoCloseable {
 
     private val session: OrtSession

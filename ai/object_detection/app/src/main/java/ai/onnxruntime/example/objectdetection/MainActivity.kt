@@ -1,6 +1,7 @@
 package ai.onnxruntime.example.objectdetection
 
-import ai.onnxruntime.*
+import ai.onnxruntime.OrtEnvironment
+import ai.onnxruntime.OrtSession
 import ai.onnxruntime.extensions.OrtxPackage
 import android.annotation.SuppressLint
 import android.graphics.Bitmap
@@ -15,12 +16,8 @@ import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.activity.*
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.*
 import java.io.InputStream
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var outputImage: ImageView
     private lateinit var objectDetectionButton: Button
     private var imageid = 0;
-    private lateinit var classes:List<String>
+    private lateinit var classes: List<String>
 
     @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,10 +81,12 @@ class MainActivity : AppCompatActivity() {
 
         canvas.drawBitmap(mutableBitmap, 0.0f, 0.0f, paint)
         var boxit = result.outputBox.iterator()
-        while(boxit.hasNext()) {
+        while (boxit.hasNext()) {
             var box_info = boxit.next()
-            canvas.drawText("%s:%.2f".format(classes[box_info[5].toInt()],box_info[4]),
-                box_info[0]-box_info[2]/2, box_info[1]-box_info[3]/2, paint)
+            canvas.drawText(
+                "%s:%.2f".format(classes[box_info[5].toInt()], box_info[4]),
+                box_info[0] - box_info[2] / 2, box_info[1] - box_info[3] / 2, paint
+            )
         }
 
         outputImage.setImageBitmap(mutableBitmap)

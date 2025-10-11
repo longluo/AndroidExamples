@@ -12,12 +12,17 @@ import androidx.core.app.ActivityCompat
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicBoolean
 
+
 class MainActivity : AppCompatActivity() {
+
     private val usePrerecordedAudioButton: Button by lazy { findViewById(R.id.use_prerecorded_audio_button) }
+
     private val recordAudioButton: Button by lazy { findViewById(R.id.record_audio_button) }
+
     private val stopRecordingAudioButton: Button by lazy { findViewById(R.id.stop_recording_audio_button) }
 
     private val resultText: TextView by lazy { findViewById(R.id.result_text) }
+
     private val statusText: TextView by lazy { findViewById(R.id.status_text) }
 
     private val speechRecognizer: SpeechRecognizer by lazy {

@@ -17,7 +17,9 @@ class AudioTensorSource {
 
     companion object {
         private const val bytesPerFloat = 4
+
         private const val sampleRate = 16000
+
         private const val maxAudioLengthInSeconds = 30
 
         fun fromRawPcmBytes(rawBytes: ByteArray): OnnxTensor {
@@ -95,7 +97,6 @@ class AudioTensorSource {
                     env, floatAudioDataBuffer,
                     tensorShape(1, floatAudioData.size.toLong())
                 )
-
             } finally {
                 if (audioRecord.recordingState == AudioRecord.RECORDSTATE_RECORDING) {
                     audioRecord.stop()
@@ -104,5 +105,4 @@ class AudioTensorSource {
             }
         }
     }
-
 }

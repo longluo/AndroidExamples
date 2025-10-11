@@ -5,9 +5,11 @@ import ai.onnxruntime.OrtEnvironment
 import java.nio.FloatBuffer
 import java.nio.IntBuffer
 
+
 internal fun createIntTensor(env: OrtEnvironment, data: IntArray, shape: LongArray): OnnxTensor {
     return OnnxTensor.createTensor(env, IntBuffer.wrap(data), shape)
 }
+
 
 internal fun createFloatTensor(
     env: OrtEnvironment,
@@ -17,4 +19,6 @@ internal fun createFloatTensor(
     return OnnxTensor.createTensor(env, FloatBuffer.wrap(data), shape)
 }
 
+
 internal fun tensorShape(vararg dims: Long) = longArrayOf(*dims)
+
