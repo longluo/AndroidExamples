@@ -1,0 +1,3 @@
+rootProject.name = "android_v4l2_camera"
+include ':sample'
+include ':sdk_v4l2_camera'
