@@ -1,0 +1,3431 @@
+[
+  {
+    "name": "c2.android.aac.decoder",
+    "canonicalName": "c2.android.aac.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/mp4a-latm",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/mp4a-latm}",
+        "colorFormats": [],
+        "profileLevels": [
+          {
+            "profile": 2,
+            "level": 0
+          },
+          {
+            "profile": 5,
+            "level": 0
+          },
+          {
+            "profile": 29,
+            "level": 0
+          },
+          {
+            "profile": 23,
+            "level": 0
+          },
+          {
+            "profile": 39,
+            "level": 0
+          },
+          {
+            "profile": 20,
+            "level": 0
+          },
+          {
+            "profile": 42,
+            "level": 0
+          }
+        ],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[7350, 8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000]",
+          "supportedSampleRateRanges": "[[7350, 7350], [8000, 8000], [11025, 11025], [12000, 12000], [16000, 16000], [22050, 22050], [24000, 24000], [32000, 32000], [44100, 44100], [48000, 48000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[8000, 510000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.aac.decoder",
+    "canonicalName": "c2.android.aac.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/mp4a-latm",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/mp4a-latm}",
+        "colorFormats": [],
+        "profileLevels": [
+          {
+            "profile": 2,
+            "level": 0
+          },
+          {
+            "profile": 5,
+            "level": 0
+          },
+          {
+            "profile": 29,
+            "level": 0
+          },
+          {
+            "profile": 23,
+            "level": 0
+          },
+          {
+            "profile": 39,
+            "level": 0
+          },
+          {
+            "profile": 20,
+            "level": 0
+          },
+          {
+            "profile": 42,
+            "level": 0
+          }
+        ],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[7350, 8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000]",
+          "supportedSampleRateRanges": "[[7350, 7350], [8000, 8000], [11025, 11025], [12000, 12000], [16000, 16000], [22050, 22050], [24000, 24000], [32000, 32000], [44100, 44100], [48000, 48000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[8000, 510000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.aac.encoder",
+    "canonicalName": "c2.android.aac.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/mp4a-latm",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/mp4a-latm, bitrate-mode=1}",
+        "colorFormats": [],
+        "profileLevels": [
+          {
+            "profile": 2,
+            "level": 0
+          },
+          {
+            "profile": 5,
+            "level": 0
+          },
+          {
+            "profile": 29,
+            "level": 0
+          },
+          {
+            "profile": 23,
+            "level": 0
+          },
+          {
+            "profile": 39,
+            "level": 0
+          }
+        ],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000]",
+          "supportedSampleRateRanges": "[[8000, 8000], [11025, 11025], [12000, 12000], [16000, 16000], [22050, 22050], [24000, 24000], [32000, 32000], [44100, 44100], [48000, 48000]]",
+          "maxInputChannelCount": 6,
+          "bitrateRange": "[8000, 510000]"
+        },
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.aac.encoder",
+    "canonicalName": "c2.android.aac.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/mp4a-latm",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/mp4a-latm, bitrate-mode=1}",
+        "colorFormats": [],
+        "profileLevels": [
+          {
+            "profile": 2,
+            "level": 0
+          },
+          {
+            "profile": 5,
+            "level": 0
+          },
+          {
+            "profile": 29,
+            "level": 0
+          },
+          {
+            "profile": 23,
+            "level": 0
+          },
+          {
+            "profile": 39,
+            "level": 0
+          }
+        ],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000]",
+          "supportedSampleRateRanges": "[[8000, 8000], [11025, 11025], [12000, 12000], [16000, 16000], [22050, 22050], [24000, 24000], [32000, 32000], [44100, 44100], [48000, 48000]]",
+          "maxInputChannelCount": 6,
+          "bitrateRange": "[8000, 510000]"
+        },
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.amrnb.decoder",
+    "canonicalName": "c2.android.amrnb.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/3gpp",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=8000, mime=audio\/3gpp, channel-count=1}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000]",
+          "supportedSampleRateRanges": "[[8000, 8000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[4750, 12200]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.amrnb.decoder",
+    "canonicalName": "c2.android.amrnb.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/3gpp",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=8000, mime=audio\/3gpp, channel-count=1}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000]",
+          "supportedSampleRateRanges": "[[8000, 8000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[4750, 12200]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.amrnb.encoder",
+    "canonicalName": "c2.android.amrnb.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/3gpp",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=8000, mime=audio\/3gpp, channel-count=1, bitrate-mode=2}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000]",
+          "supportedSampleRateRanges": "[[8000, 8000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[4750, 12200]"
+        },
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.amrnb.encoder",
+    "canonicalName": "c2.android.amrnb.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/3gpp",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=8000, mime=audio\/3gpp, channel-count=1, bitrate-mode=2}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000]",
+          "supportedSampleRateRanges": "[[8000, 8000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[4750, 12200]"
+        },
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.amrwb.decoder",
+    "canonicalName": "c2.android.amrwb.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/amr-wb",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=16000, mime=audio\/amr-wb, channel-count=1}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[16000]",
+          "supportedSampleRateRanges": "[[16000, 16000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[6600, 23850]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.amrwb.decoder",
+    "canonicalName": "c2.android.amrwb.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/amr-wb",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=16000, mime=audio\/amr-wb, channel-count=1}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[16000]",
+          "supportedSampleRateRanges": "[[16000, 16000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[6600, 23850]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.amrwb.encoder",
+    "canonicalName": "c2.android.amrwb.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/amr-wb",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=16000, mime=audio\/amr-wb, channel-count=1, bitrate-mode=2}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[16000]",
+          "supportedSampleRateRanges": "[[16000, 16000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[6600, 23850]"
+        },
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.amrwb.encoder",
+    "canonicalName": "c2.android.amrwb.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/amr-wb",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=16000, mime=audio\/amr-wb, channel-count=1, bitrate-mode=2}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[16000]",
+          "supportedSampleRateRanges": "[[16000, 16000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[6600, 23850]"
+        },
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.flac.decoder",
+    "canonicalName": "c2.android.flac.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/flac",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/flac}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "null",
+          "supportedSampleRateRanges": "[[7350, 192000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[1, 21000000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.flac.decoder",
+    "canonicalName": "c2.android.flac.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/flac",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/flac}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "null",
+          "supportedSampleRateRanges": "[[7350, 192000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[1, 21000000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.flac.encoder",
+    "canonicalName": "c2.android.flac.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/flac",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{complexity=5, mime=audio\/flac, bitrate-mode=0}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "null",
+          "supportedSampleRateRanges": "[[7350, 192000]]",
+          "maxInputChannelCount": 2,
+          "bitrateRange": "[1, 21000000]"
+        },
+        "encoderCapabilities": {
+          "complexityRange": "[0, 8]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.flac.encoder",
+    "canonicalName": "c2.android.flac.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/flac",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{complexity=5, mime=audio\/flac, bitrate-mode=0}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "null",
+          "supportedSampleRateRanges": "[[7350, 192000]]",
+          "maxInputChannelCount": 2,
+          "bitrateRange": "[1, 21000000]"
+        },
+        "encoderCapabilities": {
+          "complexityRange": "[0, 8]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.g711.alaw.decoder",
+    "canonicalName": "c2.android.g711.alaw.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/g711-alaw",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=8000, mime=audio\/g711-alaw, channel-count=1, bitrate=64000}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000]",
+          "supportedSampleRateRanges": "[[8000, 8000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[64000, 64000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.g711.alaw.decoder",
+    "canonicalName": "c2.android.g711.alaw.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/g711-alaw",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=8000, mime=audio\/g711-alaw, channel-count=1, bitrate=64000}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000]",
+          "supportedSampleRateRanges": "[[8000, 8000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[64000, 64000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.g711.mlaw.decoder",
+    "canonicalName": "c2.android.g711.mlaw.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/g711-mlaw",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=8000, mime=audio\/g711-mlaw, channel-count=1, bitrate=64000}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000]",
+          "supportedSampleRateRanges": "[[8000, 8000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[64000, 64000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.g711.mlaw.decoder",
+    "canonicalName": "c2.android.g711.mlaw.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/g711-mlaw",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=8000, mime=audio\/g711-mlaw, channel-count=1, bitrate=64000}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000]",
+          "supportedSampleRateRanges": "[[8000, 8000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[64000, 64000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.gsm.decoder",
+    "canonicalName": "c2.android.gsm.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/gsm",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=8000, mime=audio\/gsm, channel-count=1, bitrate=13000}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000]",
+          "supportedSampleRateRanges": "[[8000, 8000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[13000, 13000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.gsm.decoder",
+    "canonicalName": "c2.android.gsm.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/gsm",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=8000, mime=audio\/gsm, channel-count=1, bitrate=13000}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000]",
+          "supportedSampleRateRanges": "[[8000, 8000]]",
+          "maxInputChannelCount": 1,
+          "bitrateRange": "[13000, 13000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.mp3.decoder",
+    "canonicalName": "c2.android.mp3.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/mpeg",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/mpeg}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000]",
+          "supportedSampleRateRanges": "[[8000, 8000], [11025, 11025], [12000, 12000], [16000, 16000], [22050, 22050], [24000, 24000], [32000, 32000], [44100, 44100], [48000, 48000]]",
+          "maxInputChannelCount": 2,
+          "bitrateRange": "[8000, 320000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.mp3.decoder",
+    "canonicalName": "c2.android.mp3.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/mpeg",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/mpeg}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000, 11025, 12000, 16000, 22050, 24000, 32000, 44100, 48000]",
+          "supportedSampleRateRanges": "[[8000, 8000], [11025, 11025], [12000, 12000], [16000, 16000], [22050, 22050], [24000, 24000], [32000, 32000], [44100, 44100], [48000, 48000]]",
+          "maxInputChannelCount": 2,
+          "bitrateRange": "[8000, 320000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.opus.decoder",
+    "canonicalName": "c2.android.opus.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/opus",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=48000, mime=audio\/opus}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[48000]",
+          "supportedSampleRateRanges": "[[48000, 48000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[6000, 510000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.opus.decoder",
+    "canonicalName": "c2.android.opus.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/opus",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=48000, mime=audio\/opus}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[48000]",
+          "supportedSampleRateRanges": "[[48000, 48000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[6000, 510000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.opus.encoder",
+    "canonicalName": "c2.android.opus.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/opus",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{complexity=5, mime=audio\/opus, bitrate-mode=1}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[8000, 12000, 16000, 24000, 48000]",
+          "supportedSampleRateRanges": "[[8000, 8000], [12000, 12000], [16000, 16000], [24000, 24000], [48000, 48000]]",
+          "maxInputChannelCount": 2,
+          "bitrateRange": "[6000, 510000]"
+        },
+        "encoderCapabilities": {
+          "complexityRange": "[0, 10]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.raw.decoder",
+    "canonicalName": "c2.android.raw.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/raw",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/raw}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "null",
+          "supportedSampleRateRanges": "[[8000, 96000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[1, 10000000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.raw.decoder",
+    "canonicalName": "c2.android.raw.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/raw",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/raw}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "null",
+          "supportedSampleRateRanges": "[[8000, 96000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[1, 10000000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.vorbis.decoder",
+    "canonicalName": "c2.android.vorbis.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/vorbis",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/vorbis}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "null",
+          "supportedSampleRateRanges": "[[8000, 96000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[32000, 500000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.vorbis.decoder",
+    "canonicalName": "c2.android.vorbis.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "audio\/vorbis",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/vorbis}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "null",
+          "supportedSampleRateRanges": "[[8000, 96000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[32000, 500000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.dolby.ac3.decoder",
+    "canonicalName": "OMX.dolby.ac3.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/ac3",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/ac3}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[32000, 44100, 48000]",
+          "supportedSampleRateRanges": "[[32000, 32000], [44100, 44100], [48000, 48000]]",
+          "maxInputChannelCount": 6,
+          "bitrateRange": "[32000, 640000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.dolby.ac4.decoder",
+    "canonicalName": "OMX.dolby.ac4.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/ac4",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=48000, mime=audio\/ac4}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[48000]",
+          "supportedSampleRateRanges": "[[48000, 48000]]",
+          "maxInputChannelCount": 2,
+          "bitrateRange": "[16000, 2688000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.dolby.eac3.decoder",
+    "canonicalName": "OMX.dolby.eac3.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/eac3",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=audio\/eac3}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[32000, 44100, 48000]",
+          "supportedSampleRateRanges": "[[32000, 32000], [44100, 44100], [48000, 48000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[32000, 6144000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.dolby.eac3_joc.decoder",
+    "canonicalName": "OMX.dolby.eac3_joc.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "audio\/eac3-joc",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{sample-rate=48000, mime=audio\/eac3-joc}",
+        "colorFormats": [],
+        "profileLevels": [],
+        "videoCapabilities": {},
+        "audioCapabilities": {
+          "supportedSampleRates": "[48000]",
+          "supportedSampleRateRanges": "[[48000, 48000]]",
+          "maxInputChannelCount": 8,
+          "bitrateRange": "[32000, 6144000]"
+        },
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.hisi.video.decoder.avc",
+    "canonicalName": "OMX.hisi.video.decoder.avc",
+    "isEncoder": false,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/avc",
+        "maxSupportedInstances": 16,
+        "defaultFormat": "{mime=video\/avc, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          21,
+          2130706433
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 1
+          },
+          {
+            "profile": 65536,
+            "level": 1
+          },
+          {
+            "profile": 1,
+            "level": 2
+          },
+          {
+            "profile": 65536,
+            "level": 2
+          },
+          {
+            "profile": 1,
+            "level": 4
+          },
+          {
+            "profile": 65536,
+            "level": 4
+          },
+          {
+            "profile": 1,
+            "level": 8
+          },
+          {
+            "profile": 65536,
+            "level": 8
+          },
+          {
+            "profile": 1,
+            "level": 16
+          },
+          {
+            "profile": 65536,
+            "level": 16
+          },
+          {
+            "profile": 1,
+            "level": 32
+          },
+          {
+            "profile": 65536,
+            "level": 32
+          },
+          {
+            "profile": 1,
+            "level": 64
+          },
+          {
+            "profile": 65536,
+            "level": 64
+          },
+          {
+            "profile": 1,
+            "level": 128
+          },
+          {
+            "profile": 65536,
+            "level": 128
+          },
+          {
+            "profile": 1,
+            "level": 256
+          },
+          {
+            "profile": 65536,
+            "level": 256
+          },
+          {
+            "profile": 1,
+            "level": 512
+          },
+          {
+            "profile": 65536,
+            "level": 512
+          },
+          {
+            "profile": 1,
+            "level": 1024
+          },
+          {
+            "profile": 65536,
+            "level": 1024
+          },
+          {
+            "profile": 1,
+            "level": 2048
+          },
+          {
+            "profile": 65536,
+            "level": 2048
+          },
+          {
+            "profile": 1,
+            "level": 4096
+          },
+          {
+            "profile": 65536,
+            "level": 4096
+          },
+          {
+            "profile": 1,
+            "level": 8192
+          },
+          {
+            "profile": 65536,
+            "level": 8192
+          },
+          {
+            "profile": 1,
+            "level": 16384
+          },
+          {
+            "profile": 65536,
+            "level": 16384
+          },
+          {
+            "profile": 1,
+            "level": 32768
+          },
+          {
+            "profile": 65536,
+            "level": 32768
+          },
+          {
+            "profile": 2,
+            "level": 1
+          },
+          {
+            "profile": 2,
+            "level": 2
+          },
+          {
+            "profile": 2,
+            "level": 4
+          },
+          {
+            "profile": 2,
+            "level": 8
+          },
+          {
+            "profile": 2,
+            "level": 16
+          },
+          {
+            "profile": 2,
+            "level": 32
+          },
+          {
+            "profile": 2,
+            "level": 64
+          },
+          {
+            "profile": 2,
+            "level": 128
+          },
+          {
+            "profile": 2,
+            "level": 256
+          },
+          {
+            "profile": 2,
+            "level": 512
+          },
+          {
+            "profile": 2,
+            "level": 1024
+          },
+          {
+            "profile": 2,
+            "level": 2048
+          },
+          {
+            "profile": 2,
+            "level": 4096
+          },
+          {
+            "profile": 2,
+            "level": 8192
+          },
+          {
+            "profile": 2,
+            "level": 16384
+          },
+          {
+            "profile": 2,
+            "level": 32768
+          },
+          {
+            "profile": 8,
+            "level": 1
+          },
+          {
+            "profile": 524288,
+            "level": 1
+          },
+          {
+            "profile": 8,
+            "level": 2
+          },
+          {
+            "profile": 524288,
+            "level": 2
+          },
+          {
+            "profile": 8,
+            "level": 4
+          },
+          {
+            "profile": 524288,
+            "level": 4
+          },
+          {
+            "profile": 8,
+            "level": 8
+          },
+          {
+            "profile": 524288,
+            "level": 8
+          },
+          {
+            "profile": 8,
+            "level": 16
+          },
+          {
+            "profile": 524288,
+            "level": 16
+          },
+          {
+            "profile": 8,
+            "level": 32
+          },
+          {
+            "profile": 524288,
+            "level": 32
+          },
+          {
+            "profile": 8,
+            "level": 64
+          },
+          {
+            "profile": 524288,
+            "level": 64
+          },
+          {
+            "profile": 8,
+            "level": 128
+          },
+          {
+            "profile": 524288,
+            "level": 128
+          },
+          {
+            "profile": 8,
+            "level": 256
+          },
+          {
+            "profile": 524288,
+            "level": 256
+          },
+          {
+            "profile": 8,
+            "level": 512
+          },
+          {
+            "profile": 524288,
+            "level": 512
+          },
+          {
+            "profile": 8,
+            "level": 1024
+          },
+          {
+            "profile": 524288,
+            "level": 1024
+          },
+          {
+            "profile": 8,
+            "level": 2048
+          },
+          {
+            "profile": 524288,
+            "level": 2048
+          },
+          {
+            "profile": 8,
+            "level": 4096
+          },
+          {
+            "profile": 524288,
+            "level": 4096
+          },
+          {
+            "profile": 8,
+            "level": 8192
+          },
+          {
+            "profile": 524288,
+            "level": 8192
+          },
+          {
+            "profile": 8,
+            "level": 16384
+          },
+          {
+            "profile": 524288,
+            "level": 16384
+          },
+          {
+            "profile": 8,
+            "level": 32768
+          },
+          {
+            "profile": 524288,
+            "level": 32768
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[128, 4096]",
+          "supportedHeights": "[128, 2304]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 100000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": [
+            {
+              "PerformancePoint": "PerformancePoint(4096x2160@56)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(3840x2160@60)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1920x1088@240)"
+            }
+          ]
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.hisi.video.decoder.hevc",
+    "canonicalName": "OMX.hisi.video.decoder.hevc",
+    "isEncoder": false,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/hevc",
+        "maxSupportedInstances": 16,
+        "defaultFormat": "{mime=video\/hevc, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          21,
+          2130706433
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 1
+          },
+          {
+            "profile": 1,
+            "level": 4
+          },
+          {
+            "profile": 1,
+            "level": 16
+          },
+          {
+            "profile": 1,
+            "level": 64
+          },
+          {
+            "profile": 1,
+            "level": 256
+          },
+          {
+            "profile": 1,
+            "level": 1024
+          },
+          {
+            "profile": 1,
+            "level": 4096
+          },
+          {
+            "profile": 1,
+            "level": 16384
+          },
+          {
+            "profile": 1,
+            "level": 65536
+          },
+          {
+            "profile": 2,
+            "level": 1
+          },
+          {
+            "profile": 2,
+            "level": 4
+          },
+          {
+            "profile": 2,
+            "level": 16
+          },
+          {
+            "profile": 2,
+            "level": 64
+          },
+          {
+            "profile": 2,
+            "level": 256
+          },
+          {
+            "profile": 2,
+            "level": 1024
+          },
+          {
+            "profile": 2,
+            "level": 4096
+          },
+          {
+            "profile": 2,
+            "level": 16384
+          },
+          {
+            "profile": 2,
+            "level": 65536
+          },
+          {
+            "profile": 4096,
+            "level": 1
+          },
+          {
+            "profile": 4096,
+            "level": 4
+          },
+          {
+            "profile": 4096,
+            "level": 16
+          },
+          {
+            "profile": 4096,
+            "level": 64
+          },
+          {
+            "profile": 4096,
+            "level": 256
+          },
+          {
+            "profile": 4096,
+            "level": 1024
+          },
+          {
+            "profile": 4096,
+            "level": 4096
+          },
+          {
+            "profile": 4096,
+            "level": 16384
+          },
+          {
+            "profile": 4096,
+            "level": 65536
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[128, 4096]",
+          "supportedHeights": "[128, 2304]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 40000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": [
+            {
+              "PerformancePoint": "PerformancePoint(3840x2160@60)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1920x1088@120)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1280x720@240)"
+            }
+          ]
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.hisi.video.decoder.mpeg2",
+    "canonicalName": "OMX.hisi.video.decoder.mpeg2",
+    "isEncoder": false,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/mpeg2",
+        "maxSupportedInstances": 16,
+        "defaultFormat": "{mime=video\/mpeg2}",
+        "colorFormats": [
+          2135033992,
+          21,
+          2130706433
+        ],
+        "profileLevels": [
+          {
+            "profile": 0,
+            "level": 0
+          },
+          {
+            "profile": 0,
+            "level": 1
+          },
+          {
+            "profile": 0,
+            "level": 2
+          },
+          {
+            "profile": 0,
+            "level": 3
+          },
+          {
+            "profile": 1,
+            "level": 0
+          },
+          {
+            "profile": 1,
+            "level": 1
+          },
+          {
+            "profile": 1,
+            "level": 2
+          },
+          {
+            "profile": 1,
+            "level": 3
+          },
+          {
+            "profile": 5,
+            "level": 0
+          },
+          {
+            "profile": 5,
+            "level": 1
+          },
+          {
+            "profile": 5,
+            "level": 2
+          },
+          {
+            "profile": 5,
+            "level": 3
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 1920]",
+          "supportedHeights": "[2, 1088]",
+          "supportedFrameRates": "[12, 60]",
+          "bitrateRange": "[1, 80000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.hisi.video.decoder.mpeg4",
+    "canonicalName": "OMX.hisi.video.decoder.mpeg4",
+    "isEncoder": false,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/mp4v-es",
+        "maxSupportedInstances": 16,
+        "defaultFormat": "{mime=video\/mp4v-es, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          21,
+          2130706433
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 1
+          },
+          {
+            "profile": 1,
+            "level": 2
+          },
+          {
+            "profile": 1,
+            "level": 4
+          },
+          {
+            "profile": 1,
+            "level": 8
+          },
+          {
+            "profile": 1,
+            "level": 16
+          },
+          {
+            "profile": 1,
+            "level": 32
+          },
+          {
+            "profile": 1,
+            "level": 64
+          },
+          {
+            "profile": 1,
+            "level": 128
+          },
+          {
+            "profile": 32768,
+            "level": 1
+          },
+          {
+            "profile": 32768,
+            "level": 2
+          },
+          {
+            "profile": 32768,
+            "level": 4
+          },
+          {
+            "profile": 32768,
+            "level": 8
+          },
+          {
+            "profile": 32768,
+            "level": 16
+          },
+          {
+            "profile": 32768,
+            "level": 32
+          },
+          {
+            "profile": 32768,
+            "level": 64
+          },
+          {
+            "profile": 32768,
+            "level": 128
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[128, 896]",
+          "supportedHeights": "[128, 896]",
+          "supportedFrameRates": "[12, 60]",
+          "bitrateRange": "[1, 8000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": [
+            {
+              "PerformancePoint": "PerformancePoint(1920x1088@30)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1280x720@240)"
+            }
+          ]
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.hisi.video.decoder.vp8",
+    "canonicalName": "OMX.hisi.video.decoder.vp8",
+    "isEncoder": false,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/x-vnd.on2.vp8",
+        "maxSupportedInstances": 16,
+        "defaultFormat": "{mime=video\/x-vnd.on2.vp8, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          21,
+          2130706433
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 1
+          },
+          {
+            "profile": 1,
+            "level": 2
+          },
+          {
+            "profile": 1,
+            "level": 4
+          },
+          {
+            "profile": 1,
+            "level": 8
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[128, 1920]",
+          "supportedHeights": "[128, 1088]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 100000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": [
+            {
+              "PerformancePoint": "PerformancePoint(1920x1088@30)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1280x720@240)"
+            }
+          ]
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.hisi.video.decoder.vp9",
+    "canonicalName": "OMX.hisi.video.decoder.vp9",
+    "isEncoder": false,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/x-vnd.on2.vp9",
+        "maxSupportedInstances": 16,
+        "defaultFormat": "{mime=video\/x-vnd.on2.vp9, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          21,
+          2130706433
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 1
+          },
+          {
+            "profile": 1,
+            "level": 2
+          },
+          {
+            "profile": 1,
+            "level": 4
+          },
+          {
+            "profile": 1,
+            "level": 8
+          },
+          {
+            "profile": 1,
+            "level": 16
+          },
+          {
+            "profile": 1,
+            "level": 32
+          },
+          {
+            "profile": 1,
+            "level": 64
+          },
+          {
+            "profile": 1,
+            "level": 128
+          },
+          {
+            "profile": 1,
+            "level": 256
+          },
+          {
+            "profile": 1,
+            "level": 512
+          },
+          {
+            "profile": 4,
+            "level": 1
+          },
+          {
+            "profile": 4,
+            "level": 2
+          },
+          {
+            "profile": 4,
+            "level": 4
+          },
+          {
+            "profile": 4,
+            "level": 8
+          },
+          {
+            "profile": 4,
+            "level": 16
+          },
+          {
+            "profile": 4,
+            "level": 32
+          },
+          {
+            "profile": 4,
+            "level": 64
+          },
+          {
+            "profile": 4,
+            "level": 128
+          },
+          {
+            "profile": 4,
+            "level": 256
+          },
+          {
+            "profile": 4,
+            "level": 512
+          },
+          {
+            "profile": 4096,
+            "level": 1
+          },
+          {
+            "profile": 4096,
+            "level": 2
+          },
+          {
+            "profile": 4096,
+            "level": 4
+          },
+          {
+            "profile": 4096,
+            "level": 8
+          },
+          {
+            "profile": 4096,
+            "level": 16
+          },
+          {
+            "profile": 4096,
+            "level": 32
+          },
+          {
+            "profile": 4096,
+            "level": 64
+          },
+          {
+            "profile": 4096,
+            "level": 128
+          },
+          {
+            "profile": 4096,
+            "level": 256
+          },
+          {
+            "profile": 4096,
+            "level": 512
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[128, 4096]",
+          "supportedHeights": "[128, 2304]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 120000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": [
+            {
+              "PerformancePoint": "PerformancePoint(3840x2160@60)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1920x1088@120)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1280x720@240)"
+            }
+          ]
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.hisi.video.encoder.avc",
+    "canonicalName": "OMX.hisi.video.encoder.avc",
+    "isEncoder": true,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/avc",
+        "maxSupportedInstances": 16,
+        "defaultFormat": "{mime=video\/avc, bitrate-mode=1, feature-vendor-hisi-slice-num=1}",
+        "colorFormats": [
+          2130708361,
+          2135033992,
+          21,
+          2130706433,
+          19,
+          22,
+          26,
+          27,
+          28,
+          16,
+          2130706447,
+          15,
+          25
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 1
+          },
+          {
+            "profile": 1,
+            "level": 2
+          },
+          {
+            "profile": 1,
+            "level": 4
+          },
+          {
+            "profile": 1,
+            "level": 8
+          },
+          {
+            "profile": 1,
+            "level": 16
+          },
+          {
+            "profile": 1,
+            "level": 32
+          },
+          {
+            "profile": 1,
+            "level": 64
+          },
+          {
+            "profile": 1,
+            "level": 128
+          },
+          {
+            "profile": 1,
+            "level": 256
+          },
+          {
+            "profile": 1,
+            "level": 512
+          },
+          {
+            "profile": 1,
+            "level": 1024
+          },
+          {
+            "profile": 1,
+            "level": 2048
+          },
+          {
+            "profile": 1,
+            "level": 4096
+          },
+          {
+            "profile": 1,
+            "level": 8192
+          },
+          {
+            "profile": 1,
+            "level": 16384
+          },
+          {
+            "profile": 1,
+            "level": 32768
+          },
+          {
+            "profile": 2,
+            "level": 1
+          },
+          {
+            "profile": 2,
+            "level": 2
+          },
+          {
+            "profile": 2,
+            "level": 4
+          },
+          {
+            "profile": 2,
+            "level": 8
+          },
+          {
+            "profile": 2,
+            "level": 16
+          },
+          {
+            "profile": 2,
+            "level": 32
+          },
+          {
+            "profile": 2,
+            "level": 64
+          },
+          {
+            "profile": 2,
+            "level": 128
+          },
+          {
+            "profile": 2,
+            "level": 256
+          },
+          {
+            "profile": 2,
+            "level": 512
+          },
+          {
+            "profile": 2,
+            "level": 1024
+          },
+          {
+            "profile": 2,
+            "level": 2048
+          },
+          {
+            "profile": 2,
+            "level": 4096
+          },
+          {
+            "profile": 2,
+            "level": 8192
+          },
+          {
+            "profile": 2,
+            "level": 16384
+          },
+          {
+            "profile": 2,
+            "level": 32768
+          },
+          {
+            "profile": 8,
+            "level": 1
+          },
+          {
+            "profile": 8,
+            "level": 2
+          },
+          {
+            "profile": 8,
+            "level": 4
+          },
+          {
+            "profile": 8,
+            "level": 8
+          },
+          {
+            "profile": 8,
+            "level": 16
+          },
+          {
+            "profile": 8,
+            "level": 32
+          },
+          {
+            "profile": 8,
+            "level": 64
+          },
+          {
+            "profile": 8,
+            "level": 128
+          },
+          {
+            "profile": 8,
+            "level": 256
+          },
+          {
+            "profile": 8,
+            "level": 512
+          },
+          {
+            "profile": 8,
+            "level": 1024
+          },
+          {
+            "profile": 8,
+            "level": 2048
+          },
+          {
+            "profile": 8,
+            "level": 4096
+          },
+          {
+            "profile": 8,
+            "level": 8192
+          },
+          {
+            "profile": 8,
+            "level": 16384
+          },
+          {
+            "profile": 8,
+            "level": 32768
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[176, 3840]",
+          "supportedHeights": "[144, 2160]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[280000, 60000000]",
+          "widthAlignment": 4,
+          "heightAlignment": 4,
+          "performancePoints": [
+            {
+              "PerformancePoint": "PerformancePoint(3840x2160@30)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1920x1088@60)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1280x720@120)"
+            }
+          ]
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "OMX.hisi.video.encoder.hevc",
+    "canonicalName": "OMX.hisi.video.encoder.hevc",
+    "isEncoder": true,
+    "isHardwareAccelerated": true,
+    "isSoftwareOnly": false,
+    "isVendor": true,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/hevc",
+        "maxSupportedInstances": 16,
+        "defaultFormat": "{mime=video\/hevc, bitrate-mode=1, feature-vendor-hisi-slice-num=1}",
+        "colorFormats": [
+          2130708361,
+          2135033992,
+          21,
+          2130706433,
+          19,
+          22,
+          26,
+          27,
+          28,
+          16,
+          2130706447,
+          15,
+          25
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 1
+          },
+          {
+            "profile": 1,
+            "level": 4
+          },
+          {
+            "profile": 1,
+            "level": 16
+          },
+          {
+            "profile": 1,
+            "level": 64
+          },
+          {
+            "profile": 1,
+            "level": 256
+          },
+          {
+            "profile": 1,
+            "level": 1024
+          },
+          {
+            "profile": 1,
+            "level": 4096
+          },
+          {
+            "profile": 1,
+            "level": 16384
+          },
+          {
+            "profile": 1,
+            "level": 65536
+          },
+          {
+            "profile": 1,
+            "level": 262144
+          },
+          {
+            "profile": 1,
+            "level": 1048576
+          },
+          {
+            "profile": 1,
+            "level": 4194304
+          },
+          {
+            "profile": 1,
+            "level": 16777216
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[176, 3840]",
+          "supportedHeights": "[144, 2160]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[200000, 80000000]",
+          "widthAlignment": 4,
+          "heightAlignment": 4,
+          "performancePoints": [
+            {
+              "PerformancePoint": "PerformancePoint(3840x2160@30)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1920x1088@60)"
+            },
+            {
+              "PerformancePoint": "PerformancePoint(1280x720@120)"
+            }
+          ]
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.av1.decoder",
+    "canonicalName": "c2.android.av1.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/av01",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/av01, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 64
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 1920]",
+          "supportedHeights": "[2, 1072]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 10000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.avc.decoder",
+    "canonicalName": "c2.android.avc.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/avc",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/avc, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 65536,
+            "level": 65536
+          },
+          {
+            "profile": 1,
+            "level": 65536
+          },
+          {
+            "profile": 2,
+            "level": 65536
+          },
+          {
+            "profile": 524288,
+            "level": 65536
+          },
+          {
+            "profile": 8,
+            "level": 65536
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 4080]",
+          "supportedHeights": "[2, 4080]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 48000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.h264.decoder",
+    "canonicalName": "c2.android.avc.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/avc",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/avc, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 65536,
+            "level": 65536
+          },
+          {
+            "profile": 1,
+            "level": 65536
+          },
+          {
+            "profile": 2,
+            "level": 65536
+          },
+          {
+            "profile": 524288,
+            "level": 65536
+          },
+          {
+            "profile": 8,
+            "level": 65536
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 4080]",
+          "supportedHeights": "[2, 4080]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 48000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.avc.encoder",
+    "canonicalName": "c2.android.avc.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/avc",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{feature-intra-refresh=1, mime=video\/avc, bitrate-mode=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 16384
+          },
+          {
+            "profile": 65536,
+            "level": 16384
+          },
+          {
+            "profile": 2,
+            "level": 16384
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[16, 2048]",
+          "supportedHeights": "[16, 2048]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 12000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.h264.encoder",
+    "canonicalName": "c2.android.avc.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/avc",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{feature-intra-refresh=1, mime=video\/avc, bitrate-mode=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 16384
+          },
+          {
+            "profile": 65536,
+            "level": 16384
+          },
+          {
+            "profile": 2,
+            "level": 16384
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[16, 2048]",
+          "supportedHeights": "[16, 2048]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 12000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.h263.decoder",
+    "canonicalName": "c2.android.h263.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/3gpp",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/3gpp, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 16
+          },
+          {
+            "profile": 1,
+            "level": 8
+          },
+          {
+            "profile": 8,
+            "level": 16
+          },
+          {
+            "profile": 8,
+            "level": 8
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[4, 352]",
+          "supportedHeights": "[4, 288]",
+          "supportedFrameRates": "[1, 30]",
+          "bitrateRange": "[1, 384000]",
+          "widthAlignment": 4,
+          "heightAlignment": 4,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.h263.decoder",
+    "canonicalName": "c2.android.h263.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/3gpp",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/3gpp, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 16
+          },
+          {
+            "profile": 1,
+            "level": 8
+          },
+          {
+            "profile": 8,
+            "level": 16
+          },
+          {
+            "profile": 8,
+            "level": 8
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[4, 352]",
+          "supportedHeights": "[4, 288]",
+          "supportedFrameRates": "[1, 30]",
+          "bitrateRange": "[1, 384000]",
+          "widthAlignment": 4,
+          "heightAlignment": 4,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.h263.encoder",
+    "canonicalName": "c2.android.h263.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/3gpp",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/3gpp, bitrate-mode=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 16
+          },
+          {
+            "profile": 1,
+            "level": 8
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[176, 176]",
+          "supportedHeights": "[144, 144]",
+          "supportedFrameRates": "[1, 30]",
+          "bitrateRange": "[1, 128000]",
+          "widthAlignment": 16,
+          "heightAlignment": 16,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.h263.encoder",
+    "canonicalName": "c2.android.h263.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/3gpp",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/3gpp, bitrate-mode=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 16
+          },
+          {
+            "profile": 1,
+            "level": 8
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[176, 176]",
+          "supportedHeights": "[144, 144]",
+          "supportedFrameRates": "[1, 30]",
+          "bitrateRange": "[1, 128000]",
+          "widthAlignment": 16,
+          "heightAlignment": 16,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.hevc.decoder",
+    "canonicalName": "c2.android.hevc.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/hevc",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/hevc, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 524288
+          },
+          {
+            "profile": 4,
+            "level": 524288
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 4096]",
+          "supportedHeights": "[2, 4096]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 10000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.hevc.decoder",
+    "canonicalName": "c2.android.hevc.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/hevc",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/hevc, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 524288
+          },
+          {
+            "profile": 4,
+            "level": 524288
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 4096]",
+          "supportedHeights": "[2, 4096]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 10000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.hevc.encoder",
+    "canonicalName": "c2.android.hevc.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/hevc",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{complexity=0, mime=video\/hevc, bitrate-mode=1, quality=80}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 262144
+          },
+          {
+            "profile": 4,
+            "level": 262144
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 512]",
+          "supportedHeights": "[2, 512]",
+          "supportedFrameRates": "[1, 120]",
+          "bitrateRange": "[1, 10000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 10]",
+          "qualityRange": "[0, 100]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.mpeg4.decoder",
+    "canonicalName": "c2.android.mpeg4.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/mp4v-es",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/mp4v-es, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 256
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 352]",
+          "supportedHeights": "[2, 288]",
+          "supportedFrameRates": "[12, 60]",
+          "bitrateRange": "[1, 384000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.mpeg4.decoder",
+    "canonicalName": "c2.android.mpeg4.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/mp4v-es",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/mp4v-es, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 256
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 352]",
+          "supportedHeights": "[2, 288]",
+          "supportedFrameRates": "[12, 60]",
+          "bitrateRange": "[1, 384000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.mpeg4.encoder",
+    "canonicalName": "c2.android.mpeg4.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/mp4v-es",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/mp4v-es, bitrate-mode=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 8
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[16, 176]",
+          "supportedHeights": "[16, 144]",
+          "supportedFrameRates": "[12, 60]",
+          "bitrateRange": "[1, 64000]",
+          "widthAlignment": 16,
+          "heightAlignment": 16,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.mpeg4.encoder",
+    "canonicalName": "c2.android.mpeg4.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/mp4v-es",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/mp4v-es, bitrate-mode=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 8
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[16, 176]",
+          "supportedHeights": "[16, 144]",
+          "supportedFrameRates": "[12, 60]",
+          "bitrateRange": "[1, 64000]",
+          "widthAlignment": 16,
+          "heightAlignment": 16,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.vp8.decoder",
+    "canonicalName": "c2.android.vp8.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/x-vnd.on2.vp8",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/x-vnd.on2.vp8, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 2048]",
+          "supportedHeights": "[2, 2048]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 40000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.vp8.decoder",
+    "canonicalName": "c2.android.vp8.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/x-vnd.on2.vp8",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/x-vnd.on2.vp8, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 2048]",
+          "supportedHeights": "[2, 2048]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 40000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.vp8.encoder",
+    "canonicalName": "c2.android.vp8.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/x-vnd.on2.vp8",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/x-vnd.on2.vp8, bitrate-mode=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 1
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 2048]",
+          "supportedHeights": "[2, 2048]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 40000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.vp8.encoder",
+    "canonicalName": "c2.android.vp8.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/x-vnd.on2.vp8",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/x-vnd.on2.vp8, bitrate-mode=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 1
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 2048]",
+          "supportedHeights": "[2, 2048]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 40000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "c2.android.vp9.decoder",
+    "canonicalName": "c2.android.vp9.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/x-vnd.on2.vp9",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/x-vnd.on2.vp9, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 256
+          },
+          {
+            "profile": 4,
+            "level": 256
+          },
+          {
+            "profile": 4096,
+            "level": 256
+          },
+          {
+            "profile": 16384,
+            "level": 256
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 2048]",
+          "supportedHeights": "[2, 2048]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 40000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.vp9.decoder",
+    "canonicalName": "c2.android.vp9.decoder",
+    "isEncoder": false,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/x-vnd.on2.vp9",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/x-vnd.on2.vp9, feature-adaptive-playback=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 256
+          },
+          {
+            "profile": 4,
+            "level": 256
+          },
+          {
+            "profile": 4096,
+            "level": 256
+          },
+          {
+            "profile": 16384,
+            "level": 256
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 2048]",
+          "supportedHeights": "[2, 2048]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 40000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {}
+      }
+    ]
+  },
+  {
+    "name": "c2.android.vp9.encoder",
+    "canonicalName": "c2.android.vp9.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": false,
+    "capabilities": [
+      {
+        "mimeType": "video\/x-vnd.on2.vp9",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/x-vnd.on2.vp9, bitrate-mode=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 128
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 2048]",
+          "supportedHeights": "[2, 2048]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 30000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  },
+  {
+    "name": "OMX.google.vp9.encoder",
+    "canonicalName": "c2.android.vp9.encoder",
+    "isEncoder": true,
+    "isHardwareAccelerated": false,
+    "isSoftwareOnly": true,
+    "isVendor": false,
+    "isAlias": true,
+    "capabilities": [
+      {
+        "mimeType": "video\/x-vnd.on2.vp9",
+        "maxSupportedInstances": 32,
+        "defaultFormat": "{mime=video\/x-vnd.on2.vp9, bitrate-mode=1}",
+        "colorFormats": [
+          2135033992,
+          19,
+          21,
+          20,
+          39,
+          2130708361
+        ],
+        "profileLevels": [
+          {
+            "profile": 1,
+            "level": 128
+          }
+        ],
+        "videoCapabilities": {
+          "supportedWidths": "[2, 2048]",
+          "supportedHeights": "[2, 2048]",
+          "supportedFrameRates": "[0, 960]",
+          "bitrateRange": "[1, 30000000]",
+          "widthAlignment": 2,
+          "heightAlignment": 2,
+          "performancePoints": []
+        },
+        "audioCapabilities": {},
+        "encoderCapabilities": {
+          "complexityRange": "[0, 0]",
+          "qualityRange": "[0, 0]"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_detect_codec_infos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="detect codec infos" />
+
+        <Button
+            android:id="@+id/btn_decode_to_bitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decode to bitmap" />
+
+        <Button
+            android:id="@+id/btn_decode_to_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decode to surface" />
+
+        <Button
+            android:id="@+id/btn_encode_using_buffers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encode using buffers" />
+
+        <Button
+            android:id="@+id/btn_encode_using_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encode using surface" />
+
+        <Button
+            android:id="@+id/btn_encode_using_egl_and_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encode using EGL and surface" />
+
+        <Button
+            android:id="@+id/btn_decode_to_texture_oes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decode To Texture EOS" />
+
+        <Button
+            android:id="@+id/btn_decode_to_texture_edit_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decode Edit Then Play" />
+
+        <Button
+            android:id="@+id/btn_decode_edit_encode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decode Edit Then Encode" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
